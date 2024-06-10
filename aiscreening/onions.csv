@@ -1,0 +1,1369 @@
+,0
+0,"         case_id  label  gt_label                                                       gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+0     crc_CRC198 NaN     3.0       (-56.183399632965916, 103.61279889928369, 398.8943284772958)  266.623    674.094    2.0           2  3.0          
+31    crc_CRC198 NaN     3.0       (-113.14648636567641, 169.83446218257762, 356.3244626813778)  49.013     27.548     3.0           3  3.0          
+66    crc_CRC198 NaN     3.0       (-96.86228118812824, 201.5869116828168, 389.68771859621296)   31.915     4.190      7.0           5  3.0          
+110   crc_CRC198 NaN     3.0       (-62.744734280015194, 124.0391376963019, 350.1350801384799)   25.892     0.630      4.0           4  3.0          
+242   crc_CRC198 NaN     3.0       (2.2929567676380316, 117.72952214340492, 399.6760980336944)   17.252     0.416      9.0           7 NaN           
+257   crc_CRC198 NaN     3.0       (-71.87493424641522, 94.51068252221009, 293.48356556119467)   16.662     1.024      1.0           1  3.0          
+278   crc_CRC198 NaN     3.0       (-113.78768740264799, 191.8481247566199, 394.4109278408538)   16.008     0.205      8.0           6  3.0          
+1402  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN            8  2.0          
+1403  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN            9  3.0          
+1404  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           10  3.0          
+1405  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           11  3.0          
+1406  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           12  3.0          
+1407  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           13  3.0          
+1408  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           14  3.0          
+1409  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           15  3.0          
+1410  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           16  3.0          
+1411  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           17  3.0          
+1412  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           18  3.0          
+1413  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           19  3.0          
+1414  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           20  3.0          
+1415  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           21  3.0          
+1416  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           22  3.0          
+1417  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           23  3.0          
+1418  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           24  3.0          
+1419  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           25  3.0          
+1420  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           26  3.0          
+1421  crc_CRC198 NaN    NaN        NaN                                                          NaN        NaN        NaN           27  3.0          
+
+                                                         pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+0     (-52.43742884228314, 104.70130018599852, 401.86274266669903)  183.636      7.321e+02    2.0            0.899   
+31    (-114.08547313333075, 170.3831573442182, 356.845157706065)    43.978       2.470e+01    11.0           0.873   
+66    (-97.1282894331548, 202.62355229005126, 390.71300903753473)   24.397       4.856e+00    19.0           0.740   
+110   (-64.45030381944443, 121.53797743055557, 350.4000244140625)   3.853        1.149e-02    12.0           0.036   
+242   NaN                                                          NaN          NaN          NaN            NaN      
+257   (-72.03554347826088, 94.52384850543478, 294.24437224014946)   9.890        3.669e-01    3.0            0.499   
+278   (-114.29464285714285, 191.2918581495098, 399.38041657092526)  18.676       1.367e+00    22.0           0.117   
+1402  (-82.64583333333331, 170.44401041666666, 379.4000244140625)   1.509        3.829e-03    1.0           NaN      
+1403  (-46.44481454981437, 91.79964515006188, 266.55844025564664)   8.862        2.578e-01    2.0           NaN      
+1404  (-35.600383254716974, 78.6677739639488, 303.8865473251137)    13.965       2.367e-01    4.0           NaN      
+1405  (-42.41152343750002, 83.74453125000002, 309.5000244140625)    2.682        6.381e-03    6.0           NaN      
+1406  (-51.7578125, 70.32421875, 313.4000244140625)                 1.000        1.276e-03    7.0           NaN      
+1407  (-42.510202205882365, 73.50073529411765, 314.9706126493566)   6.294        5.424e-02    8.0           NaN      
+1408  (-32.5859375, 76.3154296875, 320.9000244140625)               0.799        1.276e-03    9.0           NaN      
+1409  (-17.76323784722223, 72.36566840277777, 361.2333577473958)    2.297        5.743e-03    13.0          NaN      
+1410  (3.9572792658730123, 82.52219742063491, 369.32859584263394)   8.670        4.020e-02    14.0          NaN      
+1411  (3.361328125, 79.91015625, 373.4000244140625)                 1.000        1.276e-03    15.0          NaN      
+1412  (-106.078125, 91.4931640625, 373.4000244140625)               1.280        2.553e-03    16.0          NaN      
+1413  (-0.6328125, 92.69140625, 373.4000244140625)                  1.000        1.276e-03    17.0          NaN      
+1414  (0.166015625, 92.69140625, 377.9000244140625)                 0.000        6.381e-04    18.0          NaN      
+1415  (4.692708333333343, 84.96940104166669, 382.4000244140625)     1.509        3.829e-03    20.0          NaN      
+1416  (6.13112106821896, 90.28709022671569, 385.45884794347427)     11.526       1.953e-01    21.0          NaN      
+1417  (-9.899218750000017, 75.27695312499999, 412.4000244140625)    2.047        6.381e-03    23.0          NaN      
+1418  (-12.615234375, 81.5078125, 413.9000244140625)                0.000        6.381e-04    24.0          NaN      
+1419  (6.679537259615358, 72.720703125, 419.43848595252405)         2.682        8.296e-03    25.0          NaN      
+1420  (-63.740234375, 66.330078125, 424.4000244140625)              1.000        1.276e-03    26.0          NaN      
+1421  (9.751953125, 80.3095703125, 443.9000244140625)               0.799        1.276e-03    27.0          NaN      
+
+                                                                                      pred_fn                                                                gt_fn  dsc_overall  \
+0     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+31    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+66    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+110   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+242   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+257   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+278   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1402  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1403  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1404  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1405  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1406  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1407  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1408  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1409  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1410  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1411  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1412  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1413  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1414  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1415  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1416  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1417  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1418  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1419  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1420  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+1421  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC198_20170718_CAP1p51.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC198_20170718_CAP1p51_1-fat-label.nrrd  0.895         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+0     0.809        708.106          764.224            shell    
+31    0.809        708.106          764.224            shell    
+66    0.809        708.106          764.224            shell    
+110   0.809        708.106          764.224            shell    
+242   0.809        708.106          764.224            shell    
+257   0.809        708.106          764.224            shell    
+278   0.809        708.106          764.224            core     
+1402  0.809        708.106          764.224            None     
+1403  0.809        708.106          764.224            None     
+1404  0.809        708.106          764.224            None     
+1405  0.809        708.106          764.224            None     
+1406  0.809        708.106          764.224            None     
+1407  0.809        708.106          764.224            None     
+1408  0.809        708.106          764.224            None     
+1409  0.809        708.106          764.224            None     
+1410  0.809        708.106          764.224            None     
+1411  0.809        708.106          764.224            None     
+1412  0.809        708.106          764.224            None     
+1413  0.809        708.106          764.224            None     
+1414  0.809        708.106          764.224            None     
+1415  0.809        708.106          764.224            None     
+1416  0.809        708.106          764.224            None     
+1417  0.809        708.106          764.224            None     
+1418  0.809        708.106          764.224            None     
+1419  0.809        708.106          764.224            None     
+1420  0.809        708.106          764.224            None     
+1421  0.809        708.106          764.224            None     "
+1,"         case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+1     crc_CRC306 NaN     3.0       (-82.39122590405567, -164.88294485133662, 985.3127239465668)   198.036    9.001e+02  2.0           2  3.0          
+52    crc_CRC306 NaN     2.0       (25.509844019745373, -195.60586999622356, 1033.3426845058266)  35.460     1.856e+00  10.0         10 NaN           
+78    crc_CRC306 NaN     2.0       (51.911830133660374, -220.2078384686624, 937.1511146709385)    29.594     6.000e+00  4.0           4  3.0          
+115   crc_CRC306 NaN     2.0       (7.169451414233578, -197.8745886014077, 989.0)                 25.509     7.681e-01  7.0           7 NaN           
+546   crc_CRC306 NaN     2.0       (-88.31640625, -222.23828125, 921.0)                           9.343      6.487e-02  3.0           3 NaN           
+1023  crc_CRC306 NaN     2.0       (-63.81640625, -229.25390625, 997.0)                           1.266      2.403e-03  8.0           8 NaN           
+1049  crc_CRC306 NaN     2.0       (42.49609375, -84.97265625, 841.0)                             0.000      8.009e-04  1.0           1 NaN           
+1050  crc_CRC306 NaN     2.0       (-70.14453125, -245.70703125, 951.0)                           0.000      8.009e-04  5.0           5 NaN           
+1051  crc_CRC306 NaN     2.0       (-120.13671875, -177.99609375, 965.0)                          0.000      8.009e-04  6.0           6 NaN           
+1052  crc_CRC306 NaN     2.0       (-27.74609375, -241.27734375, 1021.0)                          0.000      8.009e-04  9.0           9 NaN           
+1246  crc_CRC306 NaN    NaN        NaN                                                           NaN        NaN        NaN           11  3.0          
+1247  crc_CRC306 NaN    NaN        NaN                                                           NaN        NaN        NaN           12  3.0          
+1248  crc_CRC306 NaN    NaN        NaN                                                           NaN        NaN        NaN           13  3.0          
+
+                                                          pred_cent  pred_length  pred_volume  pred_label_cc   dsc  \
+1     (-110.94992491501729, -149.66137334457736, 938.5204770633686)  568.659      375.517      2.0            0.55   
+52    NaN                                                           NaN          NaN          NaN            NaN     
+78    (54.10926957763584, -220.02548550512773, 933.9070409020031)    27.504       6.677        2.0            0.74   
+115   NaN                                                           NaN          NaN          NaN            NaN     
+546   NaN                                                           NaN          NaN          NaN            NaN     
+1023  NaN                                                           NaN          NaN          NaN            NaN     
+1049  NaN                                                           NaN          NaN          NaN            NaN     
+1050  NaN                                                           NaN          NaN          NaN            NaN     
+1051  NaN                                                           NaN          NaN          NaN            NaN     
+1052  NaN                                                           NaN          NaN          NaN            NaN     
+1246  (-17.62109375, -212.484375, 1009.0)                            0.633        0.002        24.0          NaN     
+1247  (-40.0859375, -193.18359375, 1023.0)                           0.633        0.002        31.0          NaN     
+1248  (-29.9609375, -227.98828125, 1043.0)                           0.633        0.002        34.0          NaN     
+
+                                                                                              pred_fn                                                              gt_fn  dsc_overall  \
+1     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+52    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+78    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+115   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+546   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1023  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1049  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1050  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1051  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1052  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1246  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1247  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+1248  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC306_20161210_Abdomen3p0I30f3.nii.gz  0.551         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+1     0.38         908.807          382.199            shell    
+52    0.38         908.807          382.199            shell    
+78    0.38         908.807          382.199            shell    
+115   0.38         908.807          382.199            core     
+546   0.38         908.807          382.199            core     
+1023  0.38         908.807          382.199            core     
+1049  0.38         908.807          382.199            core     
+1050  0.38         908.807          382.199            core     
+1051  0.38         908.807          382.199            core     
+1052  0.38         908.807          382.199            core     
+1246  0.38         908.807          382.199            None     
+1247  0.38         908.807          382.199            None     
+1248  0.38         908.807          382.199            None     "
+0,"         case_id  label  gt_label                                                         gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+2     crc_CRC138 NaN     3.0       (-26.65044341216216, -153.85884712837836, -288.0468590538781)   184.480    543.113    2.0           2  3.0          
+390   crc_CRC138 NaN     3.0       (-98.20941733374384, -137.86289639778326, -408.79607132033175)  12.689     0.214      3.0           3  3.0          
+931   crc_CRC138 NaN     2.0       (-83.61204769736841, -159.87150493421055, -400.1473806280839)   4.685      0.060      1.0           1  3.0          
+1029  crc_CRC138 NaN     3.0       (-66.84375, -167.51953125, -351.20001220703125)                 0.727      0.002      7.0           4 NaN           
+1046  crc_CRC138 NaN     3.0       (-58.48828125, -184.95703125, -345.20001220703125)              0.000      0.001      8.0           5 NaN           
+1222  crc_CRC138 NaN    NaN        NaN                                                            NaN        NaN        NaN            6  3.0          
+1223  crc_CRC138 NaN    NaN        NaN                                                            NaN        NaN        NaN            7  3.0          
+1224  crc_CRC138 NaN    NaN        NaN                                                            NaN        NaN        NaN            8  3.0          
+1225  crc_CRC138 NaN    NaN        NaN                                                            NaN        NaN        NaN            9  3.0          
+1226  crc_CRC138 NaN    NaN        NaN                                                            NaN        NaN        NaN           10  3.0          
+
+                                                           pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+2     (-72.4814694339779, -139.1669365740926, -330.91798174321275)    191.795      561.936      2.0            0.892   
+390   (-98.03052171610169, -136.89923199152543, -408.64069017313295)  6.562        0.125        1.0            0.492   
+931   (-83.09453125, -159.57578125, -398.8000122070313)               3.046        0.016        3.0            0.333   
+1029  NaN                                                            NaN          NaN          NaN            NaN      
+1046  NaN                                                            NaN          NaN          NaN            NaN      
+1222  (-82.35306490384615, -102.24068509615384, -395.20001220703125)  3.913        0.014        4.0           NaN      
+1223  (-56.06640625, -175.33558238636363, -373.2606182676373)         5.050        0.035        5.0           NaN      
+1224  (-63.271484375, -185.744140625, -338.36667887369794)            3.046        0.013        7.0           NaN      
+1225  (-81.01171875, -179.87109375, -331.20001220703125)              0.000        0.001        8.0           NaN      
+1226  (-106.44140625, -160.98046875, -317.20001220703125)             1.453        0.003        10.0          NaN      
+
+                                                                                              pred_fn                                                              gt_fn  dsc_overall  \
+2     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+390   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+931   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1029  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1046  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1222  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1223  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1224  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1225  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+1226  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC138_20180812_Abdomen3p0I30f3.nii.gz  0.892         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+2     0.805        543.391          562.142            shell    
+390   0.805        543.391          562.142            core     
+931   0.805        543.391          562.142            core     
+1029  0.805        543.391          562.142            core     
+1046  0.805        543.391          562.142            core     
+1222  0.805        543.391          562.142            None     
+1223  0.805        543.391          562.142            None     
+1224  0.805        543.391          562.142            None     
+1225  0.805        543.391          562.142            None     
+1226  0.805        543.391          562.142            None     "
+1,"         case_id  label  gt_label                                                          gt_cent  gt_length  gt_volume  gt_label_cc   fk  pred_label  \
+3     crc_CRC164 NaN     3.0       (-101.77181722266884, -192.52152833601292, -319.0295942006004)   178.881    72.344     36.0         36   3.0          
+6     crc_CRC164 NaN     3.0       (-18.95225478087994, -271.4441917257643, -305.16514577904996)    139.660    116.970    33.0         33   3.0          
+21    crc_CRC164 NaN     2.0       (-61.20081628102599, -196.4830252751759, -277.89485868342786)    58.070     11.332     1.0           1   3.0          
+27    crc_CRC164 NaN     3.0       (-147.54635151821444, -219.144235187771, -360.0316894327732)     51.982     22.757     9.0           8   3.0          
+32    crc_CRC164 NaN     3.0       (-16.821076798349083, -229.4910340507076, -241.31586126363504)   46.486     8.043      97.0         88   3.0          
+36    crc_CRC164 NaN     3.0       (-103.82512403202313, -148.67986600069008, -226.20083003569613)  44.703     7.687      110.0        110  3.0          
+41    crc_CRC164 NaN     3.0       (-117.56189482717805, -197.50359207307457, -356.2924364494555)   40.793     12.019     10.0          9   3.0          
+42    crc_CRC164 NaN     3.0       (-84.53204761125656, -249.0598606111839, -289.88064047928253)    40.636     5.218      55.0         49   3.0          
+44    crc_CRC164 NaN     3.0       (-105.76149845498189, -146.7042878978304, -345.6998610125952)    38.731     5.019      15.0         14   3.0          
+71    crc_CRC164 NaN     3.0       (-81.65623630587206, -172.91805262653378, -307.5803803051908)    30.850     6.926      42.0         39   3.0          
+91    crc_CRC164 NaN     3.0       (-90.89738427901027, -171.89098496160412, -208.6368722752906)    27.684     0.889      142.0        131  3.0          
+96    crc_CRC164 NaN     2.0       (-5.304825973825274, -261.9813736603463, -265.2074318278062)     27.294     3.682      4.0           3   3.0          
+143   crc_CRC164 NaN     3.0       (-44.9776455600566, -122.17778460969657, -242.84610274201066)    22.888     2.950      102.0        93   3.0          
+148   crc_CRC164 NaN     3.0       (-79.84776306152347, -223.0806045532227, -219.34649658203125)    22.307     3.108      130.0        119  3.0          
+175   crc_CRC164 NaN     3.0       (-62.53992745535717, -117.07544642857147, -291.9714407784598)    20.683     0.548      55.0         55   3.0          
+208   crc_CRC164 NaN     3.0       (-130.09892406798247, -234.3136764437135, -352.08305314270376)   18.627     0.643      15.0         15   3.0          
+209   crc_CRC164 NaN     3.0       (-67.99887179736027, -211.53393099767086, -288.0509438840499)    18.625     0.609      58.0         58   3.0          
+216   crc_CRC164 NaN     3.0       (-93.5954756395591, -119.70696950395177, -324.8589140373141)     18.392     0.912      34.0         32   3.0          
+219   crc_CRC164 NaN     3.0       (-65.27216221148501, -193.97572172205236, -241.8284882915696)    18.217     1.364      107.0        98   3.0          
+228   crc_CRC164 NaN     3.0       (-71.3834435096154, -167.80564903846158, -226.1015506685697)     17.640     0.986      127.0        117  3.0          
+...          ...  ..     ...                                                                ...        ...       ...        ...        ...  ...          
+930   crc_CRC164 NaN     3.0       (-24.263972355769255, -257.22230568910265, -241.53334554036456)  4.691      0.059      110.0        101 NaN           
+939   crc_CRC164 NaN     3.0       (-86.26976562500002, -178.20382812500006, -222.68001220703127)   4.449      0.038      133.0        122  3.0          
+945   crc_CRC164 NaN     3.0       (-74.39522058823533, -190.15728400735298, -309.4941298540901)    4.379      0.052      50.0         45   3.0          
+979   crc_CRC164 NaN     3.0       (-66.52690972222223, -173.03146701388894, -328.977789984809)     3.724      0.027      36.0         34   3.0          
+991   crc_CRC164 NaN     3.0       (-92.52421875000003, -257.76953125000006, -322.8000122070313)    3.404      0.015      40.0         38  NaN           
+1016  crc_CRC164 NaN     3.0       (29.092912946428555, -238.16992187500006, -220.20001220703125)   1.948      0.011      135.0        124 NaN           
+1024  crc_CRC164 NaN     3.0       (-54.71875000000003, -144.52734375000006, -264.20001220703125)   1.232      0.006      89.0         80  NaN           
+1025  crc_CRC164 NaN     3.0       (-103.06445312500003, -166.30468750000006, -268.20001220703125)  0.871      0.003      85.0         76  NaN           
+1047  crc_CRC164 NaN     3.0       (-58.63867187500003, -128.41210937500006, -286.20001220703125)   0.000      0.002      68.0         61  NaN           
+1048  crc_CRC164 NaN     3.0       (-5.501953125000028, -255.59179687500006, -276.20001220703125)   0.000      0.002      76.0         67  NaN           
+1235  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           134  3.0          
+1236  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           135  3.0          
+1237  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           136  3.0          
+1238  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           137  3.0          
+1239  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           138  3.0          
+1240  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           139  3.0          
+1241  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           140  3.0          
+1242  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           141  3.0          
+1243  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           142  3.0          
+1244  crc_CRC164 NaN    NaN        NaN                                                             NaN        NaN        NaN           143  3.0          
+
+                                                            pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+3     (-121.37590752106087, -166.72052989513293, -282.9302387995922)   109.746      78.093       32.0           0.925   
+6     (-53.46131070654417, -245.38180126187035, -306.5706150146283)    49.060       9.189        33.0           0.121   
+21    (-48.19906093446994, -212.0252845729638, -289.80440781142687)    60.708       11.740       1.0            0.918   
+27    (-147.04029790958344, -218.61354110322654, -359.8381741687044)   48.731       22.095       4.0            0.879   
+32    (-16.790806661459158, -228.73018360183488, -240.7034352288431)   49.821       9.532        84.0           0.850   
+36    (-103.64630773578811, -148.907712951187, -226.4713300364886)     36.330       9.397        104.0          0.888   
+41    (-115.91814827588506, -198.7479602360578, -358.23754686260816)   42.203       14.232       5.0            0.851   
+42    (-84.28985574872013, -248.4496209293231, -290.02708843001193)    39.454       5.336        48.0           0.887   
+44    (-106.1047535011784, -147.5742768197063, -349.25149879151274)    44.496       4.556        14.0           0.848   
+71    (-81.537109375, -172.82460937500002, -307.36727678102227)        29.616       6.769        34.0           0.938   
+91    (-88.13431140988372, -169.51557957848837, -210.01396569540333)   5.086        0.065        127.0          0.137   
+96    (-3.8582938319288473, -258.5522106156367, -262.6224841171436)    20.231       2.026        72.0           0.636   
+143   (-44.77460812048375, -121.93573191614809, -243.67813344348247)   24.702       3.780        90.0           0.855   
+148   (-80.22184878724778, -222.77310479968327, -219.92783951815278)   21.895       3.234        115.0          0.898   
+175   (-58.797933848370434, -118.13348010234495, -287.41145894788974)  22.379       0.955        54.0           0.665   
+208   (-129.83977449024823, -237.28956117021278, -345.462423554549)    20.822       0.856        11.0           0.787   
+209   (-68.27751358695653, -214.52471899703556, -282.3343995588099)    16.500       0.768        58.0           0.750   
+216   (-91.85537895114943, -119.33738176484673, -324.39541450588183)   16.361       0.792        30.0           0.789   
+219   (-64.75836784638554, -193.67907097138556, -241.76868690582643)   17.188       1.260        93.0           0.884   
+228   (-71.34614884607765, -167.76594381438193, -226.32679509134186)   18.631       0.958        114.0          0.876   
+...                                                              ...      ...         ...          ...            ...   
+930   NaN                                                             NaN          NaN          NaN            NaN      
+939   (-86.513671875, -178.12897858796296, -221.7555677625868)         4.449        0.041        118.0          0.692   
+945   (-74.86682581018516, -189.93713831018516, -308.86667887369794)   4.442        0.041        41.0           0.689   
+979   (-66.06706283244682, -172.60436336436172, -329.95320369639296)   10.212       0.357        25.0           0.142   
+991   NaN                                                             NaN          NaN          NaN            NaN      
+1016  NaN                                                             NaN          NaN          NaN            NaN      
+1024  NaN                                                             NaN          NaN          NaN            NaN      
+1025  NaN                                                             NaN          NaN          NaN            NaN      
+1047  NaN                                                             NaN          NaN          NaN            NaN      
+1048  NaN                                                             NaN          NaN          NaN            NaN      
+1235  (-134.423828125, -232.072265625, -330.20001220703125)            1.742        0.008        29.0          NaN      
+1236  (-120.921875, -232.83447265625, -313.95001220703125)             3.404        0.024        37.0          NaN      
+1237  (-25.853870738636374, -238.56587357954547, -312.20001220703125)  3.696        0.017        40.0          NaN      
+1238  (-67.95558763586956, -178.67043138586956, -303.5913165548573)    4.379        0.035        45.0          NaN      
+1239  (-103.5, -234.25, -290.20001220703125)                           1.232        0.006        57.0          NaN      
+1240  (-33.115624999999994, -233.988671875, -275.40001220703124)       3.173        0.015        66.0          NaN      
+1241  (-117.4375, -211.0902683423913, -263.33044698963994)             4.871        0.070        76.0          NaN      
+1242  (-8.316256009615387, -242.86042668269232, -260.3538583608774)    3.141        0.020        79.0          NaN      
+1243  (-16.100260416666657, -178.79036458333334, -230.20001220703125)  1.948        0.009        113.0         NaN      
+1244  (-27.400282118055543, -175.54796006944443, -220.56112331814234)  7.747        0.109        120.0         NaN      
+
+                                                                                              pred_fn                                                            gt_fn  dsc_overall  \
+3     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+6     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+21    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+27    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+32    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+36    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+41    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+42    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+44    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+71    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+91    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+96    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+143   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+148   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+175   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+208   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+209   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+216   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+219   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+228   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+...                                                                                               ...                                                              ...    ...         
+930   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+939   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+945   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+979   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+991   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1016  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1024  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1025  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1047  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1048  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1235  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1236  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1237  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1238  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1239  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1240  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1241  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1242  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1243  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+1244  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC164_20180213_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC164_20180213_Abdomen3p0I30f3.nrrd  0.703         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+3     0.542        331.329          229.465            shell    
+6     0.542        331.329          229.465            shell    
+21    0.542        331.329          229.465            shell    
+27    0.542        331.329          229.465            shell    
+32    0.542        331.329          229.465            shell    
+36    0.542        331.329          229.465            shell    
+41    0.542        331.329          229.465            shell    
+42    0.542        331.329          229.465            shell    
+44    0.542        331.329          229.465            shell    
+71    0.542        331.329          229.465            shell    
+91    0.542        331.329          229.465            core     
+96    0.542        331.329          229.465            shell    
+143   0.542        331.329          229.465            shell    
+148   0.542        331.329          229.465            shell    
+175   0.542        331.329          229.465            shell    
+208   0.542        331.329          229.465            shell    
+209   0.542        331.329          229.465            shell    
+216   0.542        331.329          229.465            shell    
+219   0.542        331.329          229.465            shell    
+228   0.542        331.329          229.465            shell    
+...     ...            ...              ...              ...    
+930   0.542        331.329          229.465            shell    
+939   0.542        331.329          229.465            core     
+945   0.542        331.329          229.465            core     
+979   0.542        331.329          229.465            core     
+991   0.542        331.329          229.465            core     
+1016  0.542        331.329          229.465            core     
+1024  0.542        331.329          229.465            core     
+1025  0.542        331.329          229.465            core     
+1047  0.542        331.329          229.465            core     
+1048  0.542        331.329          229.465            core     
+1235  0.542        331.329          229.465            None     
+1236  0.542        331.329          229.465            None     
+1237  0.542        331.329          229.465            None     
+1238  0.542        331.329          229.465            None     
+1239  0.542        331.329          229.465            None     
+1240  0.542        331.329          229.465            None     
+1241  0.542        331.329          229.465            None     
+1242  0.542        331.329          229.465            None     
+1243  0.542        331.329          229.465            None     
+1244  0.542        331.329          229.465            None     
+
+[143 rows x 21 columns]"
+0,"         case_id  label  gt_label                                                         gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+4     crc_CRC211 NaN     3.0       (-113.98879718570544, -132.76246791858986, 1309.3021981892675)  174.885    204.053    1.0           1  3.0          
+10    crc_CRC211 NaN     3.0       (-59.28595910298819, -96.14668951627891, 1281.4590807656662)    91.849     17.481     8.0           8  3.0          
+12    crc_CRC211 NaN     3.0       (27.206949617214974, -184.6490388345748, 1326.5414559902856)    77.086     95.189     22.0         18  3.0          
+39    crc_CRC211 NaN     3.0       (-2.262951199913232, -152.4188382434138, 1293.9050802578402)    42.349     17.836     13.0         11  3.0          
+51    crc_CRC211 NaN     3.0       (-35.76391788448157, -102.9079038361169, 1309.9783886138482)    35.983     10.108     20.0         16  3.0          
+61    crc_CRC211 NaN     3.0       (-101.96307693474041, -167.29819641557495, 1243.2378600602704)  33.491     7.249      2.0           2  3.0          
+83    crc_CRC211 NaN     3.0       (-46.18281249999998, -225.92260416666664, 1294.97340416519)     28.743     2.585      15.0         13  3.0          
+85    crc_CRC211 NaN     3.0       (-29.103331868331736, -154.160722675194, 1351.0465268826565)    28.456     5.802      31.0         27  3.0          
+113   crc_CRC211 NaN     3.0       (-51.841818301687766, -118.76857199367089, 1327.4572328907527)  25.694     2.501      24.0         20  3.0          
+114   crc_CRC211 NaN     3.0       (-85.15826292786468, -188.51585167636046, 1368.2554545406672)   25.603     5.261      34.0         30  3.0          
+116   crc_CRC211 NaN     3.0       (-107.29470340254441, -182.5983394843175, 1292.1215717456382)   25.378     4.396      14.0         12  3.0          
+117   crc_CRC211 NaN     3.0       (-56.97440804886212, -135.9820218373494, 1272.6462002618405)    25.229     2.102      7.0           7  3.0          
+135   crc_CRC211 NaN     3.0       (38.713654891304344, -217.33118206521738, 1294.1217555066814)   23.510     0.808      14.0         14  3.0          
+138   crc_CRC211 NaN     3.0       (-52.54950218329125, -172.8956228956229, 1368.848251668843)     23.189     3.343      35.0         31  3.0          
+140   crc_CRC211 NaN     3.0       (-101.33085949136134, -199.4121053023533, 1244.419138619294)    23.114     4.723      3.0           3  3.0          
+145   crc_CRC211 NaN     3.0       (-87.27180616324684, -127.75152525271577, 1258.1151024530145)   22.464     4.662      6.0           6  3.0          
+165   crc_CRC211 NaN     3.0       (-77.18634160630593, -182.08745539518534, 1326.7227275140447)   21.389     3.302      23.0         19  3.0          
+207   crc_CRC211 NaN     3.0       (-63.15754406228611, -94.89575312286107, 1335.419730542948)     18.683     2.055      29.0         25  3.0          
+214   crc_CRC211 NaN     3.0       (-106.1012359048405, -213.3055870691236, 1299.700786674945)     18.462     1.918      18.0         15  3.0          
+224   crc_CRC211 NaN     3.0       (-71.9509006922777, -147.7515113104524, 1354.7911264313364)     17.780     1.804      33.0         29  3.0          
+235   crc_CRC211 NaN     3.0       (-75.27802767255893, -214.75172295875421, 1272.7323387586307)   17.399     1.671      9.0           9  3.0          
+428   crc_CRC211 NaN     3.0       (-3.4839806782334506, -157.80281447160883, 1340.004434603246)   11.732     0.446      30.0         26  3.0          
+490   crc_CRC211 NaN     3.0       (-75.44113955823293, -164.06570030120483, 1345.156644910215)    10.422     0.350      32.0         28  3.0          
+534   crc_CRC211 NaN     3.0       (-133.1146484375, -137.88046875, 1243.1978714955706)            9.618      0.394      4.0           4  3.0          
+554   crc_CRC211 NaN     3.0       (-95.95961334745762, -78.53226518361583, 1325.145780320895)     9.263      0.249      26.0         22  3.0          
+635   crc_CRC211 NaN     3.0       (-107.5797842920354, -107.92560840707964, 1330.083203645934)    8.190      0.159      27.0         23  3.0          
+877   crc_CRC211 NaN     3.0       (-53.112152777777794, -69.0477430555556, 1302.4400167067845)    5.474      0.063      21.0         17  3.0          
+993   crc_CRC211 NaN     3.0       (-11.4609375, -164.79947916666669, 1328.9714463324774)          3.377      0.015      28.0         24 NaN           
+1009  crc_CRC211 NaN     3.0       (75.41927083333331, -79.02213541666669, 1244.6000144084296)     2.476      0.008      5.0           5 NaN           
+1021  crc_CRC211 NaN     3.0       (-106.671875, -66.0703125, 1272.6000155210495)                  1.423      0.003      12.0         10 NaN           
+1022  crc_CRC211 NaN     3.0       (-4.078125, -203.1171875, 1320.6000174283981)                   1.423      0.003      25.0         21 NaN           
+1234  crc_CRC211 NaN    NaN        NaN                                                            NaN        NaN        NaN           32  3.0          
+
+                                                           pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+4     (-116.56443644163045, -108.06352675895397, 1266.7279637366887)  279.510      200.084      1.0            0.942   
+10    (-63.072661708760265, -85.11143098918777, 1283.5349492594394)   58.373       25.470       8.0            0.809   
+12    (27.420689278822778, -184.43492039639642, 1325.7215259639281)   82.660       102.617      19.0           0.941   
+39    (-2.99755805381497, -151.50085525709548, 1293.7630462182406)    44.310       22.900       13.0           0.870   
+51    (-36.2909404055946, -102.63029156651169, 1310.0724561246566)    36.622       13.315       17.0           0.845   
+61    (-101.31793124001692, -166.32193915601803, 1243.3607960936606)  32.711       7.486        3.0            0.916   
+83    (-44.296776840885684, -226.95059700051493, 1295.010356267375)   28.713       3.415        15.0           0.806   
+85    (-29.065901541095883, -154.22148030821918, 1351.4323912563063)  30.088       6.419        27.0           0.930   
+113   (-51.25109300476947, -118.43757141792528, 1327.7604310674583)   27.293       3.540        22.0           0.816   
+114   (-84.99671680993315, -188.5305504566619, 1368.4907070104862)    26.391       5.892        30.0           0.929   
+116   (-107.44591346153845, -182.91675646551724, 1291.5960753891854)  23.613       3.713        14.0           0.889   
+117   (-56.6655972750317, -136.46317530101393, 1272.2144641749305)    24.477       2.220        10.0           0.882   
+135   (29.10810680775043, -222.50775712438997, 1292.6138438784935)    36.690       12.107       12.0           0.125   
+138   (-52.37865905075492, -173.05798265338902, 1369.600147868903)    23.812       4.379        31.0           0.838   
+140   (-100.9570479535736, -198.96389403252903, 1244.410460338588)    23.294       4.606        2.0            0.912   
+145   (-87.19936773629126, -127.80483799120327, 1257.9618487649877)   23.992       5.478        6.0            0.916   
+165   (-77.50110118086938, -181.77639976059825, 1326.8178356225346)   21.250       3.269        21.0           0.920   
+207   (-63.3721923828125, -94.55457384832974, 1335.2466774931627)     20.650       2.611        25.0           0.872   
+214   (-106.32508795074759, -213.32417408751098, 1299.4385390149573)  16.223       1.600        16.0           0.896   
+224   (-72.11983952702703, -147.3738935810811, 1354.818180950268)     19.375       1.952        29.0           0.907   
+235   (-75.07022422316385, -214.72731285310735, 1272.4353666040952)   16.453       1.743        9.0            0.897   
+428   (-3.4686252721335222, -157.4974941037736, 1340.6403665556445)   11.028       0.485        26.0           0.853   
+490   (-75.5998641304348, -163.9656929347826, 1344.8348010000975)     9.546        0.227        28.0           0.780   
+534   (-133.03163785460993, -137.63543513593382, 1242.8283831323574)  10.081       0.298        4.0            0.824   
+554   (-95.66192574786325, -78.51989850427353, 1325.0359150405623)    7.819        0.165        23.0           0.796   
+635   (-107.17728758169935, -107.156352124183, 1329.7764883812736)    8.666        0.215        24.0           0.726   
+877   (-53.3722061258278, -68.3621171357616, 1301.5231954783003)      8.536        0.212        18.0           0.459   
+993   NaN                                                            NaN          NaN          NaN            NaN      
+1009  NaN                                                            NaN          NaN          NaN            NaN      
+1021  NaN                                                            NaN          NaN          NaN            NaN      
+1022  NaN                                                            NaN          NaN          NaN            NaN      
+1234  (39.5625, -217.6640625, 1307.4000169038773)                     1.423        0.003        20.0          NaN      
+
+                                                                                            pred_fn                                                            gt_fn  dsc_overall  \
+4     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+10    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+12    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+39    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+51    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+61    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+83    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+85    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+113   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+114   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+116   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+117   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+135   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+138   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+140   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+145   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+165   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+207   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+214   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+224   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+235   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+428   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+490   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+534   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+554   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+635   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+877   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+993   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+1009  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+1021  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+1022  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+1234  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC211_20170724_AbdoPelvis1p5.nii.gz  0.909         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+4     0.833        400.538          436.42             core     
+10    0.833        400.538          436.42             shell    
+12    0.833        400.538          436.42             shell    
+39    0.833        400.538          436.42             shell    
+51    0.833        400.538          436.42             shell    
+61    0.833        400.538          436.42             shell    
+83    0.833        400.538          436.42             shell    
+85    0.833        400.538          436.42             shell    
+113   0.833        400.538          436.42             shell    
+114   0.833        400.538          436.42             shell    
+116   0.833        400.538          436.42             shell    
+117   0.833        400.538          436.42             shell    
+135   0.833        400.538          436.42             core     
+138   0.833        400.538          436.42             shell    
+140   0.833        400.538          436.42             shell    
+145   0.833        400.538          436.42             shell    
+165   0.833        400.538          436.42             shell    
+207   0.833        400.538          436.42             shell    
+214   0.833        400.538          436.42             shell    
+224   0.833        400.538          436.42             shell    
+235   0.833        400.538          436.42             shell    
+428   0.833        400.538          436.42             shell    
+490   0.833        400.538          436.42             shell    
+534   0.833        400.538          436.42             shell    
+554   0.833        400.538          436.42             shell    
+635   0.833        400.538          436.42             shell    
+877   0.833        400.538          436.42             core     
+993   0.833        400.538          436.42             core     
+1009  0.833        400.538          436.42             core     
+1021  0.833        400.538          436.42             core     
+1022  0.833        400.538          436.42             core     
+1234  0.833        400.538          436.42             None     "
+1,"        case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+5    crc_CRC346 NaN     3.0       (-100.80761790714813, 168.11322079955787, 320.15297231765555)  161.393    41.059     1.0           1  3.0          
+300  crc_CRC346 NaN     3.0       (-61.66240376823339, 212.62312601296594, 367.9734075660644)    15.274     0.784      4.0           2  3.0          
+
+                                                      pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+5    (-99.55083626760563, 166.8058631393625, 337.8548650440916)  60.082       43.688       1.0            0.868   
+300  (-61.57324343790012, 213.5077424775928, 368.594482031125)   10.873       0.496        2.0            0.645   
+
+                                                                                   pred_fn                                                    gt_fn  dsc_overall  jac_overall  \
+5    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC346_20180111_CAP11.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC346_20180111_CAP11.nii.gz  0.865        0.762         
+300  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC346_20180111_CAP11.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC346_20180111_CAP11.nii.gz  0.865        0.762         
+
+     gt_volume_total  pred_volume_total location  
+5    41.843           44.184             shell    
+300  41.843           44.184             shell    "
+0,"         case_id  label  gt_label                                                          gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+7     crc_CRC071 NaN     3.0       (-84.86778237882905, -128.69012520940083, -100.50845533387758)   131.043    329.242    1.0           1  3.0          
+402   crc_CRC071 NaN     3.0       (-14.167376687717763, -207.62597315984323, -106.88779877453311)  12.404     0.443      2.0           2  3.0          
+1245  crc_CRC071 NaN    NaN        NaN                                                             NaN        NaN        NaN            3  3.0          
+
+                                                           pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+7     (-84.10895263564478, -126.0948484717189, -99.25984893736972)    133.132      375.796      1.0            0.886   
+402   (-14.143159906914889, -207.3853474069149, -105.96027758442762)  8.469        0.218        3.0            0.589   
+1245  (-82.623046875, -153.111328125, -138.39999389648438)            1.243        0.005        2.0           NaN      
+
+                                                                                              pred_fn                                                                         gt_fn  \
+7     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC071_20171221_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC071_20171221_Abdomen3p0I30f3-tissue-label.nrrd   
+402   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC071_20171221_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC071_20171221_Abdomen3p0I30f3-tissue-label.nrrd   
+1245  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC071_20171221_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC071_20171221_Abdomen3p0I30f3-tissue-label.nrrd   
+
+      dsc_overall  jac_overall  gt_volume_total  pred_volume_total location  
+7     0.886        0.795        329.685          376.018            shell    
+402   0.886        0.795        329.685          376.018            shell    
+1245  0.886        0.795        329.685          376.018            None     "
+1,"         case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+8     crc_CRC301 NaN     3.0       (38.372440111671466, 63.615964324310426, 370.97853863693746)   127.433    29.352     5.0           5  3.0          
+9     crc_CRC301 NaN     3.0       (27.526854255413554, 107.32292105778902, 384.60243720723923)   100.685    26.025     8.0           8  3.0          
+11    crc_CRC301 NaN     3.0       (-57.659425875035765, 75.25759645787682, 385.73529648199315)   79.061     27.983     7.0           7  3.0          
+23    crc_CRC301 NaN     3.0       (-76.95058225235852, 132.57051723008385, 406.76101314078653)   55.301     13.989     16.0         14  3.0          
+30    crc_CRC301 NaN     3.0       (-72.58506499450753, 198.6459859025998, 404.4307091404605)     49.222     3.641      19.0         16  3.0          
+79    crc_CRC301 NaN     3.0       (-5.2893218750000415, 99.69971093749999, 393.87838779296874)   29.448     3.333      12.0         11  3.0          
+81    crc_CRC301 NaN     3.0       (-22.564291245835108, 151.61209278035193, 397.3566308583582)   28.968     6.401      13.0         12  3.0          
+105   crc_CRC301 NaN     3.0       (14.893451721613076, 86.4940379524632, 358.2618381984959)      26.505     4.438      6.0           6  3.0          
+107   crc_CRC301 NaN     3.0       (-32.072570068944884, 120.29500149880096, 372.1728894716258)   26.163     0.556      9.0           9 NaN           
+154   crc_CRC301 NaN     3.0       (-16.681234529703005, 90.31996441831683, 383.91204899908934)   22.073     1.481      10.0         10  3.0          
+177   crc_CRC301 NaN     3.0       (-90.04883607838863, 166.54896106020945, 353.827038403789)     20.622     2.291      3.0           3  3.0          
+185   crc_CRC301 NaN     3.0       (-20.892382244731124, 88.44026787336483, 345.0645226766897)    20.031     1.834      1.0           1  3.0          
+240   crc_CRC301 NaN     3.0       (-23.700517614338736, 124.3104478909147, 394.1578369895077)    17.281     1.078      14.0         13  3.0          
+246   crc_CRC301 NaN     3.0       (-46.237032336012206, 157.82633647371853, 421.87513983467164)  17.047     1.534      23.0         20  3.0          
+319   crc_CRC301 NaN     3.0       (-12.385416666666686, 100.73828125, 421.67638332725903)        14.741     0.836      22.0         19  3.0          
+324   crc_CRC301 NaN     3.0       (-38.395882352941214, 57.9747242647059, 353.4552819106158)     14.604     0.567      4.0           4  3.0          
+421   crc_CRC301 NaN     3.0       (29.55159845711293, 113.92176059100419, 416.34601289757126)    11.943     0.319      21.0         18 NaN           
+449   crc_CRC301 NaN     3.0       (-85.2317934782609, 197.69962635869567, 393.29998779296875)    11.104     0.153      17.0         15 NaN           
+599   crc_CRC301 NaN     3.0       (-67.47391863567077, 163.78513243140245, 419.53169511004194)   8.717      0.219      24.0         21  3.0          
+604   crc_CRC301 NaN     3.0       (-65.95200892857146, 80.72433035714286, 344.2022434320665)     8.640      0.177      2.0           2  3.0          
+632   crc_CRC301 NaN     3.0       (50.369735054347814, 92.68138586956522, 407.29998779296875)    8.205      0.061      20.0         17 NaN           
+1401  crc_CRC301 NaN    NaN        NaN                                                           NaN        NaN        NaN           22  3.0          
+
+                                                         pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+8     (33.63692066879216, 71.89587638060732, 388.13612920110864)    84.333       31.410       4.0            0.800   
+9     (29.949820144898126, 113.01115209610302, 387.64299602564705)  60.671       22.218       8.0            0.767   
+11    (-53.92661088878427, 59.65154108469345, 371.7218333673567)    99.127       16.116       7.0            0.690   
+23    (-90.96101433418568, 146.32441237214792, 400.2519940872252)   47.948       8.618        14.0           0.725   
+30    (-85.63844191522763, 196.49637583398743, 404.2733001948526)   36.163       2.236        16.0           0.593   
+79    (-6.03152952981651, 100.37436209862386, 394.6663486492379)    21.662       2.180        15.0           0.740   
+81    (-23.4643963182761, 152.14201590948375, 398.5329907890508)    27.361       5.784        16.0           0.833   
+105   (15.718872173499562, 87.54059792371092, 358.84774772534405)   20.312       3.154        5.0            0.774   
+107   NaN                                                          NaN          NaN          NaN            NaN      
+154   (-16.453109437250987, 90.2574338064409, 384.35178062165403)   13.831       1.004        12.0           0.693   
+177   (-90.14437806372548, 167.3571537990196, 354.61268129142076)   14.235       1.292        3.0            0.676   
+185   (-21.296133990263826, 89.45469044440955, 345.7346611598029)   14.047       1.061        1.0            0.659   
+240   (-22.912326388888886, 125.20789930555554, 395.2181164479395)  13.390       0.912        17.0           0.743   
+246   (-46.82119742794906, 158.67877639075064, 422.0077625918964)   14.604       0.994        24.0           0.745   
+319   (-11.240513392857139, 102.150390625, 422.30750658996124)      10.033       0.355        26.0           0.571   
+324   (-39.28419018817206, 58.33774361559141, 354.80536413705477)   7.702        0.124        6.0            0.305   
+421   NaN                                                          NaN          NaN          NaN            NaN      
+449   NaN                                                          NaN          NaN          NaN            NaN      
+599   (-66.54743303571428, 164.7036830357143, 419.85637877041233)   7.257        0.177        25.0           0.660   
+604   (-65.4921875, 80.87630208333331, 344.572715065696)            4.163        0.044        2.0            0.398   
+632   NaN                                                          NaN          NaN          NaN            NaN      
+1401  (30.428124999999994, 67.35859375, 359.29998779296875)         1.826        0.007        8.0           NaN      
+
+                                                                                      pred_fn                                                    gt_fn  dsc_overall  jac_overall  \
+8     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+9     /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+11    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+23    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+30    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+79    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+81    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+105   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+107   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+154   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+177   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+185   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+240   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+246   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+319   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+324   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+421   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+449   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+599   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+604   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+632   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+1401  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC301_20150723_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC301_20150723_ABDOMEN.nrrd  0.744        0.592         
+
+      gt_volume_total  pred_volume_total location  
+8     126.268          97.685             shell    
+9     126.268          97.685             shell    
+11    126.268          97.685             shell    
+23    126.268          97.685             shell    
+30    126.268          97.685             shell    
+79    126.268          97.685             shell    
+81    126.268          97.685             shell    
+105   126.268          97.685             shell    
+107   126.268          97.685             shell    
+154   126.268          97.685             shell    
+177   126.268          97.685             shell    
+185   126.268          97.685             shell    
+240   126.268          97.685             shell    
+246   126.268          97.685             shell    
+319   126.268          97.685             shell    
+324   126.268          97.685             shell    
+421   126.268          97.685             shell    
+449   126.268          97.685             core     
+599   126.268          97.685             shell    
+604   126.268          97.685             shell    
+632   126.268          97.685             core     
+1401  126.268          97.685             None     "
+0,"         case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+13    crc_CRC089 NaN     3.0       (-93.98875683362886, 182.00876982368004, 446.5143297945448)    76.865     15.396     50.0         50  3.0          
+28    crc_CRC089 NaN     3.0       (-116.01018135991512, 120.08513998382855, 454.23540319624345)  51.540     7.717      56.0         56  3.0          
+45    crc_CRC089 NaN     3.0       (-118.82542913732395, 238.90989006187863, 419.4706588783043)   38.380     13.495     26.0         26  3.0          
+59    crc_CRC089 NaN     3.0       (-98.21382346082089, 141.8438277363184, 440.79252510640157)    33.682     2.852      49.0         49  3.0          
+65    crc_CRC089 NaN     3.0       (-130.36509951355242, 158.0830770177165, 473.21246507946177)   32.030     9.230      76.0         73  3.0          
+70    crc_CRC089 NaN     3.0       (-86.18272528382215, 96.37730605487226, 439.0478591269328)     31.294     2.954      42.0         42  3.0          
+73    crc_CRC089 NaN     3.0       (-28.5685218562393, 84.54620999946397, 440.94835829039584)     30.342     6.518      45.0         45  3.0          
+75    crc_CRC089 NaN     3.0       (-140.36663845680397, 170.2454258057296, 393.96381948500095)   29.856     3.122      19.0         19  3.0          
+82    crc_CRC089 NaN     3.0       (-94.21675161388217, 225.23293009269474, 434.907028181404)     28.825     6.332      40.0         40  3.0          
+93    crc_CRC089 NaN     3.0       (-142.23482712462976, 129.64137972772838, 438.8020383739667)   27.473     6.134      44.0         44  3.0          
+95    crc_CRC089 NaN     3.0       (-112.03561935240964, 157.36462914156624, 361.9358914074266)   27.375     5.800      5.0           5  3.0          
+97    crc_CRC089 NaN     3.0       (-122.89501396323017, 148.43291286071675, 423.77811206571715)  27.156     6.005      33.0         33  3.0          
+112   crc_CRC089 NaN     3.0       (-50.77262809684686, 158.58695302445298, 453.054814047795)     25.757     2.172      60.0         59  3.0          
+124   crc_CRC089 NaN     3.0       (-129.7268802966102, 199.2067372881355, 475.6738860980535)     24.698     2.061      82.0         79  3.0          
+125   crc_CRC089 NaN     3.0       (-66.3707883090791, 147.5700579658992, 432.0849573846282)      24.593     3.217      38.0         38  3.0          
+129   crc_CRC089 NaN     3.0       (-77.95591736837804, 243.98032057308694, 431.338248093819)     24.178     4.274      41.0         41  3.0          
+136   crc_CRC089 NaN     3.0       (-29.139516615013804, 137.28660898760327, 443.5093541841533)   23.412     2.029      48.0         48  3.0          
+141   crc_CRC089 NaN     3.0       (-93.15972334085052, 132.72565305519757, 423.59809775860447)   23.089     3.254      34.0         34  3.0          
+151   crc_CRC089 NaN     3.0       (-77.29239101264315, 126.90142309756675, 400.9822397013657)    22.141     2.929      21.0         21  3.0          
+167   crc_CRC089 NaN     3.0       (-49.9730902777778, 87.41835171568624, 456.55380042913436)     21.199     1.283      66.0         64  3.0          
+...          ...  ..     ...                                                              ...        ...       ...       ...         ..  ...          
+563   crc_CRC089 NaN     3.0       (-101.90413851351354, 110.49445734797294, 440.09728509026604)  9.153      0.207      51.0         51  3.0          
+587   crc_CRC089 NaN     3.0       (-62.70298295454549, 196.46960227272723, 405.672715065696)     8.882      0.154      23.0         23  3.0          
+606   crc_CRC089 NaN     3.0       (-123.45090379901963, 141.4838388480392, 483.30979171453737)   8.607      0.143      86.0         83  3.0          
+611   crc_CRC089 NaN     3.0       (-67.62815020161293, 76.15196572580643, 409.2354716639365)     8.525      0.173      27.0         27  3.0          
+666   crc_CRC089 NaN     3.0       (-57.15240778688528, 133.55801741803276, 438.9147418913294)    7.740      0.085      53.0         53 NaN           
+678   crc_CRC089 NaN     3.0       (-135.12114319620252, 185.05083069620252, 311.1164434891713)   7.570      0.110      1.0           1 NaN           
+717   crc_CRC089 NaN     3.0       (-72.58441558441561, 74.02972808441555, 448.4493384423194)     7.137      0.108      61.0         60 NaN           
+722   crc_CRC089 NaN     3.0       (-150.61352040816325, 179.2865114795918, 417.79998779296875)   7.093      0.068      36.0         36 NaN           
+764   crc_CRC089 NaN     3.0       (-157.45098286290323, 152.2627268145161, 383.0257942445817)    6.673      0.087      17.0         17  3.0          
+778   crc_CRC089 NaN     3.0       (-117.60186298076924, 249.8392427884615, 451.79998779296875)   6.529      0.036      71.0         68 NaN           
+829   crc_CRC089 NaN     3.0       (-153.74544270833334, 157.76822916666666, 457.79998779296875)  5.911      0.050      75.0         72 NaN           
+857   crc_CRC089 NaN     3.0       (-133.99909855769232, 203.18749999999994, 463.79998779296875)  5.608      0.036      78.0         75 NaN           
+917   crc_CRC089 NaN     3.0       (-125.84602864583334, 212.66145833333326, 351.79998779296875)  4.874      0.034      4.0           4 NaN           
+928   crc_CRC089 NaN     3.0       (-56.056857638888914, 72.4097222222222, 449.18887668185766)    4.729      0.050      63.0         61  2.0          
+936   crc_CRC089 NaN     3.0       (-111.1701766304348, 127.6260190217391, 469.79998779296875)    4.502      0.032      80.0         77 NaN           
+952   crc_CRC089 NaN     3.0       (-88.05468750000003, 80.52760416666666, 447.79998779296875)    4.262      0.021      64.0         62 NaN           
+978   crc_CRC089 NaN     3.0       (-119.65312500000003, 119.64947916666665, 377.79998779296875)  3.738      0.021      15.0         15 NaN           
+1156  crc_CRC089 NaN     3.0       (-96.41406250000003, 239.13281249999994, 441.79998779296875)   0.000      0.001      59.0         58 NaN           
+1157  crc_CRC089 NaN     3.0       (-37.89843750000003, 154.70312499999997, 451.79998779296875)   0.000      0.001      70.0         67 NaN           
+1455  crc_CRC089 NaN    NaN        NaN                                                           NaN        NaN        NaN           84  2.0          
+
+                                                          pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+13    (-82.89323308978607, 173.83364325976697, 450.41925062313845)   50.604       13.916       50.0           0.821   
+28    (-115.20115278674166, 122.32692496081506, 455.29510119883264)  35.740       7.579        54.0           0.830   
+45    (-118.7908161653185, 239.6535712279519, 420.38351773342487)    36.485       12.440       26.0           0.900   
+59    (-99.60655722255731, 148.8777800814234, 448.62387199079745)    27.942       2.317        49.0           0.788   
+65    (-131.0743285841938, 158.50488110603652, 473.52294251894176)   30.851       8.798        63.0           0.890   
+70    (-88.06159607438016, 88.36872094524793, 433.75040101610927)    27.350       2.074        42.0           0.756   
+73    (-28.2268616112124, 85.73028002506837, 441.8492129524947)      28.278       6.133        45.0           0.873   
+75    (-143.6274395910781, 173.39518471189592, 393.22749708664907)   28.590       2.130        19.0           0.763   
+82    (-94.31125124100274, 225.69702081782077, 436.0809508110874)    26.642       5.631        40.0           0.847   
+93    (-142.0856905254384, 130.2041071097802, 439.0911708011189)     24.842       5.659        41.0           0.899   
+95    (-111.40761010165569, 157.897680408449, 362.4929510264725)     25.854       5.740        5.0            0.873   
+97    (-122.5043698512985, 148.95217379921812, 424.75837930371995)   23.880       5.005        34.0           0.861   
+112   (-54.464972014925365, 158.5908582089552, 449.75819674819263)   15.529       0.468        58.0           0.334   
+124   (-131.03493400433945, 199.7623327507232, 475.5936232799504)    18.334       1.462        79.0           0.793   
+125   (-66.17919331688157, 147.66030104250606, 432.23350914671573)   22.406       3.469        37.0           0.874   
+129   (-77.561578247586, 244.59137843240796, 431.5616051737774)      22.726       4.632        38.0           0.856   
+136   (-29.127547400090805, 138.1104109900091, 443.21869805636567)   22.826       1.539        46.0           0.794   
+141   (-92.77230188992044, 133.30534234084882, 424.5564864667088)    19.903       2.634        33.0           0.836   
+151   (-76.79983714123867, 127.42403464879155, 401.74258598027996)   18.675       2.776        20.0           0.858   
+167   (-51.84519610609482, 86.95822164221218, 454.97380269138864)    11.545       0.619        61.0           0.570   
+...                                                           ...       ...         ...         ...             ...   
+563   (-102.20730377906975, 111.11773255813955, 440.7302203511083)   4.926        0.060        53.0           0.450   
+587   (-62.140625, 196.43569711538458, 406.79998779296875)           4.240        0.036        24.0           0.382   
+606   (-122.91819852941177, 140.91015625, 484.44704661649814)        4.415        0.048        72.0           0.500   
+611   (-67.45861037234044, 77.42337101063828, 410.69360481424536)    5.269        0.066        28.0           0.374   
+666   NaN                                                           NaN          NaN          NaN            NaN      
+678   NaN                                                           NaN          NaN          NaN            NaN      
+717   NaN                                                           NaN          NaN          NaN            NaN      
+722   NaN                                                           NaN          NaN          NaN            NaN      
+764   (-157.13042091836735, 153.15066964285717, 382.9428449358259)   4.926        0.068        16.0           0.793   
+778   NaN                                                           NaN          NaN          NaN            NaN      
+829   NaN                                                           NaN          NaN          NaN            NaN      
+857   NaN                                                           NaN          NaN          NaN            NaN      
+917   NaN                                                           NaN          NaN          NaN            NaN      
+928   (-55.453125, 73.19921875, 449.79998779296875)                  0.836        0.003        1.0            0.105   
+936   NaN                                                           NaN          NaN          NaN            NaN      
+952   NaN                                                           NaN          NaN          NaN            NaN      
+978   NaN                                                           NaN          NaN          NaN            NaN      
+1156  NaN                                                           NaN          NaN          NaN            NaN      
+1157  NaN                                                           NaN          NaN          NaN            NaN      
+1455  (-154.09375, 158.255859375, 459.79998779296875)                1.672        0.006        2.0           NaN      
+
+                                                                                      pred_fn                                                                 gt_fn  dsc_overall  \
+13    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+28    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+45    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+59    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+65    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+70    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+73    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+75    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+82    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+93    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+95    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+97    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+112   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+124   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+125   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+129   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+136   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+141   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+151   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+167   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+...                                                                                       ...                                                                   ...    ...         
+563   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+587   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+606   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+611   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+666   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+678   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+717   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+722   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+764   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+778   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+829   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+857   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+917   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+928   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+936   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+952   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+978   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+1156  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+1157  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+1455  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC089_20180509_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC089_20180509_ABDOMEN-tissue-label.nrrd  0.818         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+13    0.692        156.049          131.595            shell    
+28    0.692        156.049          131.595            shell    
+45    0.692        156.049          131.595            shell    
+59    0.692        156.049          131.595            shell    
+65    0.692        156.049          131.595            shell    
+70    0.692        156.049          131.595            shell    
+73    0.692        156.049          131.595            shell    
+75    0.692        156.049          131.595            shell    
+82    0.692        156.049          131.595            shell    
+93    0.692        156.049          131.595            shell    
+95    0.692        156.049          131.595            shell    
+97    0.692        156.049          131.595            shell    
+112   0.692        156.049          131.595            shell    
+124   0.692        156.049          131.595            shell    
+125   0.692        156.049          131.595            shell    
+129   0.692        156.049          131.595            shell    
+136   0.692        156.049          131.595            shell    
+141   0.692        156.049          131.595            shell    
+151   0.692        156.049          131.595            shell    
+167   0.692        156.049          131.595            shell    
+...     ...            ...              ...              ...    
+563   0.692        156.049          131.595            core     
+587   0.692        156.049          131.595            shell    
+606   0.692        156.049          131.595            shell    
+611   0.692        156.049          131.595            shell    
+666   0.692        156.049          131.595            shell    
+678   0.692        156.049          131.595            shell    
+717   0.692        156.049          131.595            shell    
+722   0.692        156.049          131.595            core     
+764   0.692        156.049          131.595            shell    
+778   0.692        156.049          131.595            core     
+829   0.692        156.049          131.595            core     
+857   0.692        156.049          131.595            core     
+917   0.692        156.049          131.595            core     
+928   0.692        156.049          131.595            core     
+936   0.692        156.049          131.595            core     
+952   0.692        156.049          131.595            core     
+978   0.692        156.049          131.595            core     
+1156  0.692        156.049          131.595            shell    
+1157  0.692        156.049          131.595            core     
+1455  0.692        156.049          131.595            None     
+
+[84 rows x 21 columns]"
+1,"         case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+14    crc_CRC019 NaN     3.0       (-111.28273143467526, 154.6801880061423, 422.1279832408634)    67.174     4.599e+01  1.0           1  3.0          
+35    crc_CRC019 NaN     3.0       (-74.0975362458989, 127.4575537921296, 499.59019732245946)     44.745     1.253e+01  8.0           8  3.0          
+38    crc_CRC019 NaN     3.0       (-24.768553296781533, 162.8863838649957, 509.4985636972695)    43.047     1.641e+01  10.0         10  3.0          
+56    crc_CRC019 NaN     3.0       (-59.085239609181144, 176.74714058622828, 516.8852412491899)   33.919     2.637e+00  11.0         11  3.0          
+282   crc_CRC019 NaN     3.0       (-11.845920138888886, 135.40051626461988, 494.6600546267198)   15.908     1.119e+00  9.0           9  3.0          
+394   crc_CRC019 NaN     3.0       (-95.24527138157895, 215.82175164473685, 472.1872058380815)    12.550     6.215e-01  5.0           5  3.0          
+509   crc_CRC019 NaN     3.0       (-19.15413627320956, 110.96253315649868, 464.8755846099449)    10.060     3.523e-01  4.0           4  3.0          
+607   crc_CRC019 NaN     3.0       (-9.101981814971765, 125.59401483050848, 477.69546801895746)   8.581      1.654e-01  7.0           7 NaN           
+680   crc_CRC019 NaN     3.0       (-104.55418730945122, 109.92787728658537, 417.37315852467606)  7.551      1.533e-01  2.0           2  3.0          
+807   crc_CRC019 NaN     3.0       (-75.71310763888889, 157.82204861111111, 474.28411477709574)   6.211      5.888e-02  6.0           6  2.0          
+1154  crc_CRC019 NaN     3.0       (-101.08203125, 109.89453125, 415.29998779296875)              0.000      9.346e-04  3.0           3 NaN           
+1451  crc_CRC019 NaN    NaN        NaN                                                           NaN        NaN        NaN           12  2.0          
+1452  crc_CRC019 NaN    NaN        NaN                                                           NaN        NaN        NaN           13  3.0          
+
+                                                          pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+14    (-111.55539610327745, 155.92312063821933, 422.75014023199316)  64.372       49.048       3.0            0.903   
+35    (-74.07739232789547, 127.90908326571574, 500.5486382883565)    42.950       13.678       7.0            0.863   
+38    (-24.71658848677606, 164.03562968138363, 510.30119224945776)   41.642       18.623       9.0            0.848   
+56    (-56.07033990159783, 178.11590875876854, 518.6070805443328)    31.537       3.009        11.0           0.744   
+282   (-11.48136750744601, 135.6853069154877, 495.7988708905116)     14.811       1.255        8.0            0.802   
+394   (-95.18046875, 216.1625, 473.0714163643973)                    12.970       0.818        6.0            0.799   
+509   (-18.30597014925374, 111.62290111940298, 465.3477489869986)    9.745        0.313        5.0            0.736   
+607   NaN                                                           NaN          NaN          NaN            NaN      
+680   (-104.33034899635037, 110.24880246350365, 418.2196958221658)   6.752        0.128        4.0            0.718   
+807   (-75.447265625, 157.74609375, 475.29998779296875)              2.465        0.011        1.0            0.320   
+1154  NaN                                                           NaN          NaN          NaN            NaN      
+1451  (46.916015625, 155.353515625, 525.2999877929688)               0.967        0.004        2.0           NaN      
+1452  (-29.98828125, 148.517578125, 517.2999877929688)               0.684        0.002        12.0          NaN      
+
+                                                                                      pred_fn                                                      gt_fn  dsc_overall  jac_overall  \
+14    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+35    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+38    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+56    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+282   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+394   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+509   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+607   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+680   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+807   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+1154  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+1451  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+1452  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC019_20190617_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC019_20190617_ABDOMEN.nii.gz  0.875        0.778         
+
+      gt_volume_total  pred_volume_total location  
+14    80.038           86.889             shell    
+35    80.038           86.889             core     
+38    80.038           86.889             shell    
+56    80.038           86.889             shell    
+282   80.038           86.889             shell    
+394   80.038           86.889             shell    
+509   80.038           86.889             shell    
+607   80.038           86.889             shell    
+680   80.038           86.889             shell    
+807   80.038           86.889             core     
+1154  80.038           86.889             core     
+1451  80.038           86.889             None     
+1452  80.038           86.889             None     "
+0,"         case_id  label  gt_label                                                       gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+15    crc_CRC006 NaN     2.0       (-84.22285580949332, -166.92118342878953, 786.9984138646261)  65.436     37.381     1.0           1  3.0          
+824   crc_CRC006 NaN     2.0       (-77.33783560739437, -249.84823393485917, 869.4690347859557)  5.931      0.056      2.0           2  2.0          
+997   crc_CRC006 NaN     2.0       (2.849609375, -248.048828125, 912.5000224113464)              3.234      0.004      3.0           3 NaN           
+1216  crc_CRC006 NaN    NaN        NaN                                                          NaN        NaN        NaN            4  3.0          
+
+                                                         pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+15    (-84.17814890558455, -166.99899968004345, 788.0895396659564)  63.845       40.346       2.0            0.901   
+824   (-77.17487614329268, -249.69888528963415, 869.7975816901137)  6.668        0.097        1.0            0.722   
+997   NaN                                                          NaN          NaN          NaN            NaN      
+1216  (-17.68626415167492, -288.59890179125307, 842.626074225376)   19.621       0.632        3.0           NaN      
+
+                                                                                     pred_fn                                                     gt_fn  dsc_overall  jac_overall  \
+15    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC006_20191025_CAP1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC006_20191025_CAP1p5.nii.gz  0.893        0.807         
+824   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC006_20191025_CAP1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC006_20191025_CAP1p5.nii.gz  0.893        0.807         
+997   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC006_20191025_CAP1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC006_20191025_CAP1p5.nii.gz  0.893        0.807         
+1216  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC006_20191025_CAP1p5.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC006_20191025_CAP1p5.nii.gz  0.893        0.807         
+
+      gt_volume_total  pred_volume_total location  
+15    37.441           41.075             shell    
+824   37.441           41.075             shell    
+997   37.441           41.075             core     
+1216  37.441           41.075             None     "
+1,"         case_id  label  gt_label                                                          gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+16    crc_CRC180 NaN     3.0       (-119.5449262104606, -130.79309231062706, -321.477448016861)     60.320     16.259     9.0           9  3.0          
+19    crc_CRC180 NaN     3.0       (-87.38158113652902, -206.00294838986133, -283.61219098742566)   58.959     13.361     18.0         18  3.0          
+55    crc_CRC180 NaN     2.0       (-67.38550148547534, -139.45404310629402, -245.43780272308277)   34.339     8.022      7.0           7  2.0          
+69    crc_CRC180 NaN     3.0       (-70.41891974803664, -171.37973453861258, -317.0958236616112)    31.769     2.420      13.0         13  3.0          
+84    crc_CRC180 NaN     3.0       (-53.12891102399354, -101.23682462032713, -297.7038934719297)    28.719     5.457      15.0         14  3.0          
+103   crc_CRC180 NaN     3.0       (-126.2178061623389, -123.34658269759285, -277.7220575840208)    26.588     5.174      25.0         24  3.0          
+127   crc_CRC180 NaN     3.0       (-80.89209067557496, -188.7256075649489, -231.52598830011675)    24.527     3.684      35.0         33  3.0          
+142   crc_CRC180 NaN     3.0       (-104.09331682516844, -185.15872732137845, -335.53504937234584)  22.988     4.192      11.0         11  3.0          
+146   crc_CRC180 NaN     3.0       (-44.878684589132746, -175.65317184154176, -268.1813806492801)   22.377     2.198      27.0         26  3.0          
+171   crc_CRC180 NaN     3.0       (-61.44141342181763, -182.87085708001837, -246.74896895627694)   20.824     1.923      33.0         31  3.0          
+193   crc_CRC180 NaN     3.0       (-93.83694296283551, -135.75604084222297, -254.8431617686934)    19.292     2.280      32.0         30  3.0          
+223   crc_CRC180 NaN     3.0       (-115.387870752186, -208.4465762867647, -266.8891993374438)      18.026     1.974      29.0         28  3.0          
+231   crc_CRC180 NaN     3.0       (-118.54644815811258, -106.71307170943709, -341.0390859423884)   17.502     1.066      10.0         10  3.0          
+244   crc_CRC180 NaN     3.0       (-124.22952008928571, -169.8596168154762, -245.95715217363272)   17.139     1.483      34.0         32  3.0          
+303   crc_CRC180 NaN     3.0       (-91.54176218629344, -158.5137849903475, -289.90618866904515)    15.169     1.219      21.0         20  3.0          
+341   crc_CRC180 NaN     2.0       (-59.77012172965115, -175.1201016485618, -290.5727161077128)     14.195     0.641      1.0           1 NaN           
+374   crc_CRC180 NaN     3.0       (-27.94072640788707, -231.67225925858557, -269.29605215309107)   13.214     0.674      28.0         27  3.0          
+453   crc_CRC180 NaN     3.0       (-127.73831265072347, -107.31462268890675, -290.9321654444722)   11.007     0.488      22.0         21  3.0          
+491   crc_CRC180 NaN     3.0       (-75.22423512350298, -143.55970480913174, -331.3586953447726)    10.412     0.393      12.0         12  3.0          
+512   crc_CRC180 NaN     3.0       (-106.46221417682926, -197.05549733231706, -298.1039138276402)   10.011     0.322      18.0         17  3.0          
+525   crc_CRC180 NaN     2.0       (-32.608380681818176, -219.02056107954547, -279.6018288352273)   9.770      0.173      3.0           3 NaN           
+531   crc_CRC180 NaN     3.0       (-76.025390625, -88.991455078125, -291.458706776733)             9.713      0.289      23.0         22  3.0          
+626   crc_CRC180 NaN     2.0       (-23.49897836538463, -165.7817307692308, -271.0230872355975)     8.214      0.102      4.0           4 NaN           
+644   crc_CRC180 NaN     3.0       (-128.00547079515707, -132.18998486583772, -303.7031529723662)   8.096      0.150      16.0         15  3.0          
+725   crc_CRC180 NaN     3.0       (-50.36448823735955, -129.97877896769663, -294.94944946551595)   7.087      0.140      20.0         19  3.0          
+823   crc_CRC180 NaN     2.0       (-25.29887695312499, -217.89404296875, -267.2950101643801)       5.931      0.063      5.0           5 NaN           
+888   crc_CRC180 NaN     2.0       (-47.39134738869862, -144.7260006421233, -290.91918918531235)    5.291      0.057      2.0           2  2.0          
+950   crc_CRC180 NaN     3.0       (-107.33203125, -114.908203125, -350.7608830462331)              4.354      0.036      8.0           8  2.0          
+963   crc_CRC180 NaN     3.0       (-58.29361979166666, -178.18684895833331, -272.833343717787)     4.123      0.021      30.0         29  2.0          
+1008  crc_CRC180 NaN     2.0       (-91.89090401785714, -163.67494419642858, -264.8714386395046)    2.659      0.005      6.0           6  2.0          
+1012  crc_CRC180 NaN     3.0       (-98.244140625, -215.771484375, -302.0200115442276)              2.287      0.008      17.0         16  3.0          
+1018  crc_CRC180 NaN     3.0       (-79.51171875000001, -79.79296875, -292.3000111579895)           1.808      0.005      24.0         23 NaN           
+1027  crc_CRC180 NaN     3.0       (-78.837890625, -165.234375, -280.30001068115234)                0.809      0.002      26.0         25 NaN           
+1212  crc_CRC180 NaN    NaN        NaN                                                             NaN        NaN        NaN           34  2.0          
+1213  crc_CRC180 NaN    NaN        NaN                                                             NaN        NaN        NaN           35  3.0          
+
+                                                            pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+16    (-117.67083091310408, -143.88840177741636, -342.19681611468803)  60.146       13.757       9.0            0.898   
+19    (-90.17799896395147, -206.22322012809326, -278.397726341603)     51.312       14.838       17.0           0.897   
+55    (-67.89081233382615, -139.07659623950155, -244.759565973007)     34.135       7.894        6.0            0.910   
+69    (-66.98087688820536, -165.98411079216052, -317.6119420787656)    26.632       3.045        12.0           0.847   
+84    (-53.10023674497094, -101.10574062432767, -297.96773943828225)   29.597       7.294        13.0           0.855   
+103   (-126.13729574112197, -123.4971210756562, -277.9406178956847)    27.989       6.098        23.0           0.909   
+127   (-81.3873104772023, -188.3539133808198, -231.71337334603805)     26.435       4.685        30.0           0.855   
+142   (-104.14899224527784, -185.21704906743454, -336.1931969916942)   22.691       3.925        9.0            0.924   
+146   (-44.83216431242596, -176.1539833105006, -268.0128064014336)     22.133       2.649        25.0           0.865   
+171   (-61.8432567290146, -181.97147867244527, -247.17767359856566)    18.807       1.612        28.0           0.815   
+193   (-94.24686636210073, -135.3832450805107, -254.7912697587862)     19.892       2.235        27.0           0.916   
+223   (-114.61090574055923, -208.10302553007637, -267.54970064086456)  17.811       1.901        24.0           0.877   
+231   (-117.68239433557514, -106.80935108418367, -340.8424991722378)   17.384       1.269        8.0            0.830   
+244   (-123.89352773899475, -169.80347866704992, -245.5347004954981)   17.943       1.791        29.0           0.887   
+303   (-91.46646975061577, -159.0274110991379, -289.3187302513467)     16.965       1.433        18.0           0.879   
+341   NaN                                                             NaN          NaN          NaN            NaN      
+374   (-27.615807095864653, -231.4519208176692, -269.08046136314704)   12.402       0.626        26.0           0.865   
+453   (-127.44497950819672, -107.27941214139344, -290.7360766696148)   11.140       0.479        20.0           0.851   
+491   (-75.21502924231845, -142.82864874301674, -331.7659345139338)    9.541        0.281        11.0           0.799   
+512   (-106.40506867439517, -196.62281060987902, -298.45485011223826)  8.831        0.195        16.0           0.742   
+525   NaN                                                             NaN          NaN          NaN            NaN      
+531   (-75.7783467060811, -89.0189505912162, -291.0946057046856)       8.096        0.174        21.0           0.725   
+626   NaN                                                             NaN          NaN          NaN            NaN      
+644   (-128.701171875, -132.02812500000002, -303.980011622111)         4.294        0.024        14.0           0.271   
+725   (-50.197014149678125, -129.70657021190985, -294.9523717784063)   7.705        0.183        19.0           0.856   
+823   NaN                                                             NaN          NaN          NaN            NaN      
+888   (-46.686662946428584, -144.1275111607143, -290.68096347460676)   5.103        0.049        2.0            0.632   
+950   (-107.408203125, -115.15931919642856, -350.6428706191835)        3.777        0.016        1.0            0.537   
+963   (-58.31337267287233, -178.21488530585106, -273.1255423109582)    4.354        0.037        3.0            0.649   
+1008  (-91.70017260174419, -163.53256722383722, -264.83954495052956)   4.108        0.034        4.0            0.280   
+1012  (-98.35965401785714, -214.78962053571428, -301.5571543829782)    2.894        0.011        15.0           0.333   
+1018  NaN                                                             NaN          NaN          NaN            NaN      
+1027  NaN                                                             NaN          NaN          NaN            NaN      
+1212  (-11.185546875, -224.126953125, -262.3000099658966)              1.144        0.002        5.0           NaN      
+1213  (-106.5322265625, -223.2509765625, -287.2000109553337)           1.447        0.003        22.0          NaN      
+
+                                                                                         pred_fn                                                         gt_fn  dsc_overall  \
+16    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+19    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+55    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+69    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+84    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+103   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+127   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+142   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+146   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+171   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+193   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+223   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+231   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+244   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+303   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+341   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+374   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+453   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+491   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+512   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+525   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+531   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+626   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+644   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+725   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+823   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+888   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+950   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+963   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+1008  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+1012  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+1018  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+1027  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+1212  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+1213  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC180_20151118_CAP1p5Soft.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC180_20151118_CAP1p5Soft.nii.gz  0.879         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+16    0.785        74.28            76.54              shell    
+19    0.785        74.28            76.54              shell    
+55    0.785        74.28            76.54              shell    
+69    0.785        74.28            76.54              shell    
+84    0.785        74.28            76.54              shell    
+103   0.785        74.28            76.54              shell    
+127   0.785        74.28            76.54              shell    
+142   0.785        74.28            76.54              shell    
+146   0.785        74.28            76.54              shell    
+171   0.785        74.28            76.54              shell    
+193   0.785        74.28            76.54              shell    
+223   0.785        74.28            76.54              shell    
+231   0.785        74.28            76.54              shell    
+244   0.785        74.28            76.54              shell    
+303   0.785        74.28            76.54              shell    
+341   0.785        74.28            76.54              shell    
+374   0.785        74.28            76.54              shell    
+453   0.785        74.28            76.54              shell    
+491   0.785        74.28            76.54              shell    
+512   0.785        74.28            76.54              shell    
+525   0.785        74.28            76.54              shell    
+531   0.785        74.28            76.54              shell    
+626   0.785        74.28            76.54              core     
+644   0.785        74.28            76.54              shell    
+725   0.785        74.28            76.54              shell    
+823   0.785        74.28            76.54              core     
+888   0.785        74.28            76.54              core     
+950   0.785        74.28            76.54              core     
+963   0.785        74.28            76.54              core     
+1008  0.785        74.28            76.54              core     
+1012  0.785        74.28            76.54              core     
+1018  0.785        74.28            76.54              core     
+1027  0.785        74.28            76.54              core     
+1212  0.785        74.28            76.54              None     
+1213  0.785        74.28            76.54              None     "
+0,"        case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+17   crc_CRC269 NaN     3.0       (-22.8907692683199, 86.93376825582652, 265.7202020915583)      59.998     38.873     4.0           4  3.0          
+467  crc_CRC269 NaN     2.0       (-56.712336668494146, 107.35268183479533, 376.54149605377376)  10.731     0.371      3.0           3  2.0          
+628  crc_CRC269 NaN     2.0       (-54.033024613575265, 64.03898899529571, 361.2989003171203)    8.212      0.202      2.0           2  2.0          
+757  crc_CRC269 NaN     2.0       (12.598493303571416, 75.83063616071428, 342.74283272879467)    6.789      0.099      1.0           1  3.0          
+
+                                                        pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+17   (-23.286212300145365, 84.71845563366503, 265.4047093137482)   55.589       31.520       3.0            0.841   
+467  (-56.957146139705884, 108.01237675467917, 377.9636119495739)  8.168        0.203        2.0            0.620   
+628  (-54.29085994112319, 64.42229959239131, 361.8463523975317)    7.271        0.150        1.0            0.759   
+757  (11.96533203125, 76.25735134548611, 343.12775336371527)       5.721        0.078        4.0            0.761   
+
+                                                                                     pred_fn                                                                    gt_fn  dsc_overall  \
+17   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC269_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC269_20160529_ABDOMEN-Segment_1-label.nrrd  0.839         
+467  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC269_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC269_20160529_ABDOMEN-Segment_1-label.nrrd  0.839         
+628  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC269_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC269_20160529_ABDOMEN-Segment_1-label.nrrd  0.839         
+757  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC269_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC269_20160529_ABDOMEN-Segment_1-label.nrrd  0.839         
+
+     jac_overall  gt_volume_total  pred_volume_total location  
+17   0.722        39.544           31.951             shell    
+467  0.722        39.544           31.951             shell    
+628  0.722        39.544           31.951             shell    
+757  0.722        39.544           31.951             shell    "
+1,"        case_id  label  gt_label                                                       gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+18   crc_CRC356 NaN     3.0       (-22.550700205405775, 87.46075159463939, 265.17016040341116)  59.575     42.596     4.0           4  3.0          
+520  crc_CRC356 NaN     2.0       (-54.97795758928572, 64.09821428571429, 361.324113516972)     9.838      0.220      2.0           2  2.0          
+564  crc_CRC356 NaN     2.0       (-56.69153544503891, 107.22487536478599, 376.946279087883)    9.153      0.279      3.0           3  2.0          
+772  crc_CRC356 NaN     2.0       (12.13946368243245, 75.67055532094595, 342.95132693728885)    6.586      0.080      1.0           1  3.0          
+
+                                                        pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+18   (-23.286212300145365, 84.71845563366503, 265.4047093137482)   55.589       31.520       3.0            0.811   
+520  (-54.29085994112319, 64.42229959239131, 361.8463523975317)    7.271        0.150        1.0            0.716   
+564  (-56.957146139705884, 108.01237675467917, 377.9636119495739)  8.168        0.203        2.0            0.694   
+772  (11.96533203125, 76.25735134548611, 343.12775336371527)       5.721        0.078        4.0            0.767   
+
+                                                                                     pred_fn                                                      gt_fn  dsc_overall  jac_overall  \
+18   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC356_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC356_20160529_ABDOMEN.nii.gz  0.81         0.681         
+520  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC356_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC356_20160529_ABDOMEN.nii.gz  0.81         0.681         
+564  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC356_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC356_20160529_ABDOMEN.nii.gz  0.81         0.681         
+772  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC356_20160529_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC356_20160529_ABDOMEN.nii.gz  0.81         0.681         
+
+     gt_volume_total  pred_volume_total location  
+18   43.175           31.951             shell    
+520  43.175           31.951             shell    
+564  43.175           31.951             shell    
+772  43.175           31.951             core     "
+0,"         case_id  label  gt_label                                                        gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+20    crc_CRC315 NaN     3.0       (-79.4997388387948, 65.03707672984935, 429.90497273163453)     58.086     8.293      5.0           5  3.0          
+251   crc_CRC315 NaN     3.0       (9.13215697611875, 107.88817434918245, 436.76663370838264)     16.935     0.902      8.0           8  3.0          
+266   crc_CRC315 NaN     3.0       (-117.33668659697899, 103.03167072570052, 317.54713474681205)  16.257     0.886      1.0           1  3.0          
+288   crc_CRC315 NaN     3.0       (-103.54074150219299, 68.54848547149122, 411.86573414293014)   15.736     0.973      4.0           4  3.0          
+346   crc_CRC315 NaN     3.0       (-130.338639127994, 91.48753274700597, 376.0048148332242)      14.070     0.518      3.0           3  3.0          
+351   crc_CRC315 NaN     3.0       (-29.734911031151427, 68.9543449329653, 419.5009707863023)     13.904     0.492      6.0           6 NaN           
+355   crc_CRC315 NaN     3.0       (-119.11795243146214, 116.63637708061357, 363.734228069415)    13.827     0.594      2.0           2  3.0          
+423   crc_CRC315 NaN     3.0       (26.739476697198285, 39.76780542834051, 433.6845071726832)     11.851     0.360      7.0           7  3.0          
+703   crc_CRC315 NaN     3.0       (37.62634095149258, 56.14491021455224, 446.32539754839087)     7.264      0.104      10.0          9 NaN           
+1457  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           10  2.0          
+1458  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           11  2.0          
+1459  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           12  3.0          
+1460  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           13  3.0          
+1461  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           14  3.0          
+1462  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           15  3.0          
+1463  crc_CRC315 NaN    NaN        NaN                                                           NaN        NaN        NaN           16  3.0          
+
+                                                         pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+20    (-82.86663459329043, 65.69070255055146, 428.2422704033673)    47.569       5.579        5.0            0.742   
+251   (9.511783637873776, 109.0272658845515, 437.8651406931323)     12.928       0.467        13.0           0.637   
+266   (-117.4609177048142, 103.3713114970439, 317.9338081978463)    11.059       0.459        3.0            0.683   
+288   (-103.56608677973976, 69.16772914730481, 412.716009544174)    10.981       0.417        7.0            0.594   
+346   (-130.58070591517856, 93.45810081845238, 376.75716727120533)  6.717        0.130        6.0            0.364   
+351   NaN                                                          NaN          NaN          NaN            NaN      
+355   (-118.85465227971312, 117.28548443903688, 363.5557621189805)  11.019       0.379        5.0            0.689   
+423   (26.743102477477493, 41.392736486486484, 433.1838081978463)   7.506        0.172        12.0           0.601   
+703   NaN                                                          NaN          NaN          NaN            NaN      
+1457  (-91.2330322265625, 127.124755859375, 361.2750244140625)      3.737        0.025        1.0           NaN      
+1458  (-51.6494140625, 149.4765625, 381.4000244140625)              2.643        0.012        2.0           NaN      
+1459  (-103.33984375, 151.4384765625, 333.85456986860794)           4.837        0.034        4.0           NaN      
+1460  (-45.44737384564644, 44.50090183872031, 417.69553892593586)   12.840       0.588        8.0           NaN      
+1461  (-11.417119565217405, 133.10789741847827, 422.3391548488451)  7.178        0.178        10.0          NaN      
+1462  (-110.851171875, 147.73085937500002, 427.36366077769884)      6.858        0.085        11.0          NaN      
+1463  (76.77988281250003, 73.07895132211539, 443.538485952524)      12.874       0.202        15.0          NaN      
+
+                                                                                      pred_fn                                                                 gt_fn  dsc_overall  \
+20    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+251   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+266   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+288   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+346   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+351   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+355   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+423   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+703   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1457  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1458  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1459  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1460  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1461  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1462  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+1463  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC315_20150217_ABDOMEN.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC315_20150217_ABDOMEN-artery-label.nrrd  0.647         
+
+      jac_overall  gt_volume_total  pred_volume_total location  
+20    0.478        13.122           8.729              shell    
+251   0.478        13.122           8.729              shell    
+266   0.478        13.122           8.729              shell    
+288   0.478        13.122           8.729              shell    
+346   0.478        13.122           8.729              shell    
+351   0.478        13.122           8.729              shell    
+355   0.478        13.122           8.729              shell    
+423   0.478        13.122           8.729              shell    
+703   0.478        13.122           8.729              core     
+1457  0.478        13.122           8.729              None     
+1458  0.478        13.122           8.729              None     
+1459  0.478        13.122           8.729              None     
+1460  0.478        13.122           8.729              None     
+1461  0.478        13.122           8.729              None     
+1462  0.478        13.122           8.729              None     
+1463  0.478        13.122           8.729              None     "
+1,"         case_id  label  gt_label                                                          gt_cent  gt_length  gt_volume  gt_label_cc  fk  pred_label  \
+22    crc_CRC072 NaN     3.0       (-17.250882496672773, -244.81752074322077, -184.82865525751617)  57.442     8.997      21.0         21  3.0          
+25    crc_CRC072 NaN     3.0       (-69.93592670552678, -191.18373542746113, -135.93387588211084)   52.561     6.750      39.0         39  3.0          
+34    crc_CRC072 NaN     3.0       (-131.96920022815834, -139.0660137023175, -199.63956502111745)   45.055     10.519     9.0           9  3.0          
+40    crc_CRC072 NaN     3.0       (-68.49739911727616, -178.14195992276166, -212.53653134974974)   41.928     6.843      6.0           6  3.0          
+50    crc_CRC072 NaN     3.0       (6.137840847732178, -250.54908544816413, -175.76899489642392)    36.098     3.440      23.0         23  3.0          
+53    crc_CRC072 NaN     3.0       (-41.62120729619113, -176.9182154193117, -152.71893520591016)    35.311     6.457      34.0         32  3.0          
+77    crc_CRC072 NaN     3.0       (-56.11154589741349, -122.03953217843411, -208.7095315793893)    29.671     3.086      11.0         11  3.0          
+80    crc_CRC072 NaN     3.0       (-67.12819066345484, -145.51448405212446, -217.4259125032197)    29.188     4.646      7.0           7  3.0          
+87    crc_CRC072 NaN     3.0       (-121.14691058488613, -190.9652529761905, -172.25033497306873)   28.319     2.605      28.0         28  3.0          
+90    crc_CRC072 NaN     3.0       (-45.552773836179966, -256.33355518381586, -192.98938079814917)  27.855     5.178      18.0         18  3.0          
+94    crc_CRC072 NaN     3.0       (-135.42039456174592, -162.08654741838185, -220.94118836012353)  27.376     3.040      4.0           4  3.0          
+98    crc_CRC072 NaN     3.0       (-91.80834989266651, -206.92875195811095, -119.86428526344753)   26.913     4.648      46.0         44  3.0          
+126   crc_CRC072 NaN     3.0       (-72.47910665554882, -204.13762128562766, -164.7023288409879)    24.529     3.557      30.0         30  3.0          
+131   crc_CRC072 NaN     3.0       (-17.099654282887286, -187.57105458443272, -152.49557661911336)  23.959     2.862      35.0         33  3.0          
+137   crc_CRC072 NaN     3.0       (-78.98550760582012, -129.22490906084656, -202.5857386997768)    23.254     2.039      13.0         13  3.0          
+156   crc_CRC072 NaN     2.0       (-8.946162898570634, -268.2208416368884, -180.69166817437036)    21.951     1.962      1.0           1  2.0          
+170   crc_CRC072 NaN     3.0       (-101.4393798076923, -184.6384375, -175.20833210637016)          20.871     1.753      27.0         27  3.0          
+180   crc_CRC072 NaN     3.0       (-105.57040759597379, -145.09300386235955, -229.79702815938083)  20.463     2.304      2.0           2  3.0          
+186   crc_CRC072 NaN     3.0       (-99.18911865750529, -172.08615221987316, -198.53638805042613)   20.027     1.020      14.0         14  3.0          
+195   crc_CRC072 NaN     3.0       (-35.92644182756325, -197.33121463049267, -166.8773879293754)    19.276     0.810      32.0         31  3.0          
+203   crc_CRC072 NaN     3.0       (-47.27046701832907, -203.15981324595055, -131.862513757626)     18.924     1.265      42.0         40  3.0          
+230   crc_CRC072 NaN     3.0       (-107.6221466307815, -115.12725528309409, -178.32905152730012)   17.543     1.353      26.0         26  3.0          
+237   crc_CRC072 NaN     3.0       (-128.64575018142236, -183.78914187227866, -143.45299974062272)  17.379     1.486      39.0         37  3.0          
+265   crc_CRC072 NaN     3.0       (-101.39265839041096, -96.62084403538813, -205.66943080675657)   16.285     0.945      12.0         12  3.0          
+273   crc_CRC072 NaN     3.0       (-72.04967928463093, -145.37698274772498, -138.37120742720708)   16.035     1.067      40.0         38  3.0          
+354   crc_CRC072 NaN     3.0       (-111.35653044871795, -167.52084668803417, -130.75814407218218)  13.832     0.631      45.0         43  3.0          
+356   crc_CRC072 NaN     3.0       (-35.127889554794535, -197.73405393835617, -136.33153126337754)  13.798     0.315      43.0         41 NaN           
+371   crc_CRC072 NaN     3.0       (30.50945723684211, -242.4786558014354, -173.9000244140625)      13.300     0.225      29.0         29 NaN           
+377   crc_CRC072 NaN     3.0       (-47.23517361111112, -196.10774305555555, -146.91780219184028)   13.130     0.485      38.0         36  3.0          
+412   crc_CRC072 NaN     3.0       (-3.93786377494456, -202.76190063747228, -147.73151000164563)    12.149     0.486      37.0         35 NaN           
+441   crc_CRC072 NaN     3.0       (-115.79676392180095, -210.1582123815166, -132.73414763681131)   11.363     0.228      44.0         42  3.0          
+444   crc_CRC072 NaN     3.0       (-105.98365115814697, -135.34512280351439, -179.68277201789635)  11.292     0.338      25.0         25  3.0          
+460   crc_CRC072 NaN     3.0       (-113.4089659334764, -218.2903366416309, -156.90431625955608)    10.878     0.251      36.0         34  3.0          
+472   crc_CRC072 NaN     3.0       (-123.67500882768363, -152.53853283898306, -194.63448769089865)  10.703     0.191      20.0         20 NaN           
+487   crc_CRC072 NaN     3.0       (-94.1337890625, -191.255615234375, -200.87919108072919)         10.500     0.207      16.0         16 NaN           
+494   crc_CRC072 NaN     3.0       (-15.64983127934272, -155.6997872652582, -181.00800563471978)    10.396     0.230      24.0         24 NaN           
+629   crc_CRC072 NaN     3.0       (-128.419921875, -115.35435267857144, -227.9000244140625)        8.211      0.060      5.0           5 NaN           
+630   crc_CRC072 NaN     3.0       (-133.8090701219512, -189.2761051829268, -201.9000244140625)     8.211      0.088      17.0         17 NaN           
+640   crc_CRC072 NaN     3.0       (-120.59164402173913, -137.84789402173914, -218.9087200662364)   8.158      0.124      8.0           8 NaN           
+731   crc_CRC072 NaN     3.0       (-127.69389204545455, -139.6700599747475, -230.8697213837595)    7.060      0.107      3.0           3 NaN           
+738   crc_CRC072 NaN     3.0       (-132.57700892857144, -160.7306209415584, -195.25067376471185)   6.967      0.083      19.0         19 NaN           
+792   crc_CRC072 NaN     3.0       (-132.18359375, -205.40785845588235, -200.81178911994488)        6.378      0.073      15.0         15 NaN           
+799   crc_CRC072 NaN     3.0       (-20.956380208333314, -171.61490885416666, -189.9000244140625)   6.275      0.052      22.0         22 NaN           
+1044  crc_CRC072 NaN     3.0       (-54.5234375, -129.6484375, -215.9000244140625)                  0.000      0.001      10.0         10 NaN           
+1218  crc_CRC072 NaN    NaN        NaN                                                             NaN        NaN        NaN           45  3.0          
+1219  crc_CRC072 NaN    NaN        NaN                                                             NaN        NaN        NaN           46  3.0          
+
+                                                            pred_cent  pred_length  pred_volume  pred_label_cc    dsc  \
+22    (-20.755450502518016, -247.97705633520013, -179.28528099129613)  46.647       12.422       13.0           0.752   
+25    (-74.00834709210986, -188.42484525922262, -121.25182238915852)   41.886       9.269        30.0           0.711   
+34    (-133.38108586289223, -139.22637065143246, -199.5507747551266)   45.232       9.487        8.0            0.816   
+40    (-63.378202359261124, -176.69900768095, -213.59994901823438)     52.275       5.450        6.0            0.803   
+50    (5.615497741370007, -249.85580164509167, -174.79214954890608)    23.104       3.999        15.0           0.761   
+53    (-40.947718349025166, -175.92997130686553, -152.95784811011316)  28.515       6.473        24.0           0.810   
+77    (-55.35043886483433, -121.22192676957832, -208.6914400767131)    21.378       2.865        7.0            0.832   
+80    (-66.67925535520607, -145.67724715292843, -218.06000272208854)   22.986       3.978        5.0            0.858   
+87    (-121.5690945155902, -190.89269557349667, -170.27196205326072)   21.029       1.937        19.0           0.669   
+90    (-46.30922969288176, -256.3845310706085, -192.6646627607904)     24.087       4.697        12.0           0.864   
+94    (-135.69488251481795, -161.36709488780693, -220.67817852075177)  19.231       2.548        3.0            0.837   
+98    (-92.2019956420068, -205.27365894274377, -119.55988835964075)    22.344       3.805        34.0           0.787   
+126   (-72.2473751448196, -203.42164484028467, -164.83547625120252)    21.081       3.258        20.0           0.798   
+131   (-16.72670156547997, -185.58769071837253, -150.59296783427862)   24.328       3.393        25.0           0.711   
+137   (-77.67636199139281, -127.9538585680751, -201.09251267697329)    15.655       1.378        10.0           0.706   
+156   (-8.227726373370558, -267.3622119413408, -179.33639933647095)    18.766       1.738        1.0            0.782   
+170   (-101.50412076026765, -183.60178602330413, -172.13906456173208)  17.784       2.337        17.0           0.632   
+180   (-105.45509376471973, -144.66213421455487, -230.31170599672856)  18.439       2.290        2.0            0.845   
+186   (-99.1754529373928, -171.2143144296741, -196.85028170394241)     11.964       0.629        11.0           0.611   
+195   (-35.84892840038316, -198.6402957375479, -166.7429362914571)     13.953       0.285        31.0           0.376   
+203   (-46.1205669877408, -200.9117502189142, -131.4832118046054)      14.809       1.232        31.0           0.688   
+230   (-107.67835332306339, -114.71205160651408, -176.7732638506822)   14.805       1.225        16.0           0.755   
+237   (-129.22610572076613, -183.46287487399195, -142.3032502205141)   14.961       1.070        28.0           0.730   
+265   (-101.17176496478874, -95.5465448943662, -205.66215273957113)    12.441       0.689        9.0            0.708   
+273   (-72.12247474747475, -144.56144255050503, -136.7303274443655)    14.769       1.068        29.0           0.730   
+354   (-111.43894562007874, -167.1420398622047, -129.8764023668184)    11.994       0.548        33.0           0.765   
+356   NaN                                                             NaN          NaN          NaN            NaN      
+371   NaN                                                             NaN          NaN          NaN            NaN      
+377   (-47.170191271551715, -195.60290948275863, -145.94312786233837)  9.280        0.250        27.0           0.625   
+412   NaN                                                             NaN          NaN          NaN            NaN      
+441   (-115.25687767094018, -210.54266826923077, -133.60942612346423)  7.034        0.126        32.0           0.537   
+444   (-105.71549479166666, -134.13118489583334, -179.0250244140625)   4.726        0.052        18.0           0.266   
+460   (-113.84461805555556, -218.3990162037037, -157.3074318214699)    3.629        0.029        26.0           0.208   
+472   NaN                                                             NaN          NaN          NaN            NaN      
+487   NaN                                                             NaN          NaN          NaN            NaN      
+494   NaN                                                             NaN          NaN          NaN            NaN      
+629   NaN                                                             NaN          NaN          NaN            NaN      
+630   NaN                                                             NaN          NaN          NaN            NaN      
+640   NaN                                                             NaN          NaN          NaN            NaN      
+731   NaN                                                             NaN          NaN          NaN            NaN      
+738   NaN                                                             NaN          NaN          NaN            NaN      
+792   NaN                                                             NaN          NaN          NaN            NaN      
+799   NaN                                                             NaN          NaN          NaN            NaN      
+1044  NaN                                                             NaN          NaN          NaN            NaN      
+1218  (-93.62890625, -143.41796875, -183.9000244140625)                1.642        0.004        14.0          NaN      
+1219  (0.5410034937888213, -192.04978649068323, -167.0925709979134)    11.559       0.347        22.0          NaN      
+
+                                                                                              pred_fn                                                                         gt_fn  \
+22    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+25    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+34    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+40    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+50    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+53    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+77    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+80    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+87    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+90    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+94    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+98    /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+126   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+131   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+137   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+156   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+170   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+180   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+186   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+195   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+203   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+230   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+237   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+265   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+273   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+354   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+356   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+371   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+377   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+412   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+441   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+444   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+460   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+472   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+487   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+494   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+629   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+630   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+640   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+731   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+738   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+792   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+799   /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+1044  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+1218  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+1219  /s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/crc_CRC072_20181025_Abdomen3p0I30f3.nii.gz  /s/xnat_shadow/crc/lms/crc_CRC072_20181025_Abdomen3p0I30f3-tissue-label.nrrd   
+
+      dsc_overall  jac_overall  gt_volume_total  pred_volume_total location  
+22    0.76         0.613        92.805           88.881             shell    
+25    0.76         0.613        92.805           88.881             shell    
+34    0.76         0.613        92.805           88.881             shell    
+40    0.76         0.613        92.805           88.881             shell    
+50    0.76         0.613        92.805           88.881             shell    
+53    0.76         0.613        92.805           88.881             shell    
+77    0.76         0.613        92.805           88.881             shell    
+80    0.76         0.613        92.805           88.881             shell    
+87    0.76         0.613        92.805           88.881             shell    
+90    0.76         0.613        92.805           88.881             shell    
+94    0.76         0.613        92.805           88.881             shell    
+98    0.76         0.613        92.805           88.881             shell    
+126   0.76         0.613        92.805           88.881             shell    
+131   0.76         0.613        92.805           88.881             shell    
+137   0.76         0.613        92.805           88.881             shell    
+156   0.76         0.613        92.805           88.881             shell    
+170   0.76         0.613        92.805           88.881             shell    
+180   0.76         0.613        92.805           88.881             shell    
+186   0.76         0.613        92.805           88.881             shell    
+195   0.76         0.613        92.805           88.881             shell    
+203   0.76         0.613        92.805           88.881             shell    
+230   0.76         0.613        92.805           88.881             shell    
+237   0.76         0.613        92.805           88.881             shell    
+265   0.76         0.613        92.805           88.881             shell    
+273   0.76         0.613        92.805           88.881             shell    
+354   0.76         0.613        92.805           88.881             shell    
+356   0.76         0.613        92.805           88.881             shell    
+371   0.76         0.613        92.805           88.881             core     
+377   0.76         0.613        92.805           88.881             shell    
+412   0.76         0.613        92.805           88.881             shell    
+441   0.76         0.613        92.805           88.881             shell    
+444   0.76         0.613        92.805           88.881             shell    
+460   0.76         0.613        92.805           88.881             shell    
+472   0.76         0.613        92.805           88.881             shell    
+487   0.76         0.613        92.805           88.881             shell    
+494   0.76         0.613        92.805           88.881             shell    
+629   0.76         0.613        92.805           88.881             core     
+630   0.76         0.613        92.805           88.881             core     
+640   0.76         0.613        92.805           88.881             shell    
+731   0.76         0.613        92.805           88.881             shell    
+738   0.76         0.613        92.805           88.881             shell    
+792   0.76         0.613        92.805           88.881             core     
+799   0.76         0.613        92.805           88.881             core     
+1044  0.76         0.613        92.805           88.881             core     
+1218  0.76         0.613        92.805           88.881             None     
+1219  0.76         0.613        92.805           88.881             None     "

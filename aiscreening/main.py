@@ -217,6 +217,10 @@ def crop_center_resample(in_fldr, out_fldr, outspacing, outshape):
 
 
 class Markups:
+    '''
+    it loads a cups nifti with a  core (label 2) and shell (label 3)
+    '''
+    
     def __init__(self, outfldr, markup_shape=None):
         cups = sitk.ReadImage(
             "/s/xnat_shadow/crc/registration_output/lms_missed_50_100/merged_3cups.nrrd"
