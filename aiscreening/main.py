@@ -1,7 +1,6 @@
 # %%
 from label_analysis.helpers import crop_center, get_labels
 import ipdb
-
 from label_analysis.markups import MarkupFromLabelmap
 from registration.groupreg import (
     apply_tfm_file,
@@ -84,37 +83,41 @@ slcs = [
 ]
 
 
-def apply_tfm_folder(tfm_fn, input_fldr, output_fldr, slc):
+def apply_tfm_folder(tfm_fn, input_fldr, output_fldr, slc, is_label=True):
     """
     input_fldr: untransformed files are here
     output_flder: store transformed files here
     """
-
     maybe_makedirs(output_fldr)
     tfm_fn = str(tfm_fn)
     df = pd.read_csv("/home/ub/code/registration/fnames.csv")
     fn_lms = df["fnames"]
     fn_lms2 = fn_lms[slc].tolist()
     fn_lms2 = [Path(fn) for fn in fn_lms2]
-    fn_missed = list(input_fldr.glob("*"))
-    fn_missed = [fn for fn in fn_missed if is_sitk_file(fn)]
-    fn_missed2 = []
+    fns = list(input_fldr.glob("*"))
+    fns = [fn for fn in fns if is_sitk_file(fn)]
+    tmplt_lm = sitk.ReadImage(str(fns[0]))
+    fn_all = []
     for fn in fn_lms2:
-        fn_missed_ = find_matching_fn(fn, fn_missed, use_cid=True)
-        if not fn_missed_:
-            fn_missed_ = (
-                fn  # there are some extra files in the cropped resampled folder.
-            )
-        fn_missed2.append(fn_missed_)
+        fn_missed_ = find_matching_fn(fn, fns, use_cid=True)
+        # if not fn_missed_:
+            # fn_missed_ = (
+            #     fn  # there are some extra files in the cropped resampled folder.
+            # )
+        fn_all.append(fn_missed_)
 
-    lms_missed2 = [sitk.ReadImage(str(i)) for i in fn_missed2]
-    # tfm_fn= "/s/xnat_shadow/crc/registration_output/TransformParameters.{0}.txt".format(tfm_suffix)
-    # out_f=Path("/s/xnat_shadow/crc/registration_output/lms_missed_0_50")
-    im_lesions = apply_tfm_file(tfm_fn, lms_missed2, is_label=True)
-    store_compound_img(im_lesions, out_fldr=output_fldr, fnames=fn_missed2)
+    lms= []
+    for fn in fn_all:
+        if fn is None:
+            lm = empty_img(tmplt_lm)
+        else:
+            lm = sitk.ReadImage(str(fn))
+        lms.append(lm)
+    im_lesions = apply_tfm_file(tfm_fn, lms, is_label=is_label)
+    store_compound_img(im_lesions, out_fldr=output_fldr, fnames=fn_all)
 
 
-def _collate_folders_common_prefix(folder_prefix):
+def folder_names_common_prefix(folder_prefix):
     # folder prefix without trailing underscore e.g., "/s/xnat_shadow/crc/registration_output/lms_all"
     folders = []
     parent_folder = Path("/s/xnat_shadow/crc/registration_output/")
@@ -129,7 +132,7 @@ def _collate_folders_common_prefix(folder_prefix):
 
 def collate_files_common_prefix(prefix):
 
-    fldrs_all = _collate_folders_common_prefix(prefix)
+    fldrs_all = folder_names_common_prefix(prefix)
     fls_all = []
     for fldr in fldrs_all:
         fls_ = list(fldr.glob("*"))
@@ -138,28 +141,46 @@ def collate_files_common_prefix(prefix):
     return fls_all
 
 
-def _infer_slice_from_str(string):
+def infer_slice_from_str(string):
     start, end = string.split("_")
     start, end = int(start), int(end)
     slc = slice(start, end)
     return slc
 
+def infer_str_from_slice(slc):
+    start =str(slc.start)
+    stop = str(slc.stop)
+    return "_".join([start,stop])
 
-def apply_tfms_all(untfmd_fldr, output_folder_prefix):
-    folders = _collate_folders_common_prefix(output_folder_prefix)
-    pat = r"\d+_\d+"
-    for fldr in folders:
-        tfm_suffix = re.search(pat, fldr.name)[0]
-        slc = _infer_slice_from_str(tfm_suffix)
-        tfm_fn = Path(
-            "/s/xnat_shadow/crc/registration_output/TransformParameters.{0}.txt".format(
-                tfm_suffix
+
+def apply_tfms_all(untfmd_fldr, output_folder):
+    # folders = folder_names_common_prefix(output_folder_prefix)
+    # pat = r"\d+_\d+"
+    for slc in slcs:
+            tfm_suffix = infer_str_from_slice(slc)
+
+            tfm_fn = Path(
+                "/s/xnat_shadow/crc/registration_output/TransformParameters.{0}.txt".format(
+                    tfm_suffix
+                )
             )
-        )
-        assert tfm_fn.exists(), "File not found".format(tfm_fn)
-        apply_tfm_folder(
-            tfm_fn=tfm_fn, input_fldr=untfmd_fldr, output_fldr=fldr, slc=slc
-        )
+            assert tfm_fn.exists(), "File not found".format(tfm_fn)
+            apply_tfm_folder(
+                tfm_fn=tfm_fn, input_fldr=untfmd_fldr, output_fldr=output_folder, slc=slc
+            )
+    #
+    # for fldr in folders:
+    #     tfm_suffix = re.search(pat, fldr.name)[0]
+    #     slc = infer_slice_from_str(tfm_suffix)
+    #     tfm_fn = Path(
+    #         "/s/xnat_shadow/crc/registration_output/TransformParameters.{0}.txt".format(
+    #             tfm_suffix
+    #         )
+    #     )
+    #     assert tfm_fn.exists(), "File not found".format(tfm_fn)
+    #     apply_tfm_folder(
+    #         tfm_fn=tfm_fn, input_fldr=untfmd_fldr, output_fldr=fldr, slc=slc
+    #     )
 
 
 def add_liver(lesions_fldr, liver_fldr, output_fldr, overwrite=False):
@@ -182,7 +203,7 @@ def add_liver(lesions_fldr, liver_fldr, output_fldr, overwrite=False):
             MergeLiver.write_output()
 
 
-def crop_center_resample(in_fldr, out_fldr, outspacing, outshape):
+def crop_center_resample(in_fldr, out_fldr, outspacing, outshape,mode="nearest"):
     # outspacing = [1,1,3]
     # outshape = [288,224,64]
     # out_fldr = Path("/s/xnat_shadow/crc/cropped_resampled_missed_subcm")
@@ -197,7 +218,7 @@ def crop_center_resample(in_fldr, out_fldr, outspacing, outshape):
     keys = ["label"]
     L = LoadSITKd(keys=keys)
     E = EnsureChannelFirstd(keys=keys, channel_dim="no_channel")
-    ScL = Spacingd(keys=keys, pixdim=outspacing, mode="nearest")
+    ScL = Spacingd(keys=keys, pixdim=outspacing, mode=mode)
     C = CropForegroundd(keys=keys, source_key="label", select_fn=lambda lm: lm > 0)
     Res = ResizeWithPadOrCropd(keys=keys, spatial_size=outshape)
     Sq = SqueezeDimd(keys=keys)
@@ -217,10 +238,11 @@ def crop_center_resample(in_fldr, out_fldr, outspacing, outshape):
 
 
 class Markups:
-    '''
-    it loads a cups nifti with a  core (label 2) and shell (label 3)
-    '''
-    
+    """
+    it loads a cups nifti with a  core (label 2) and shell (label 3). It uses the cups to mask lm and estimate what is in shell and what is core
+
+    """
+
     def __init__(self, outfldr, markup_shape=None):
         cups = sitk.ReadImage(
             "/s/xnat_shadow/crc/registration_output/lms_missed_50_100/merged_3cups.nrrd"
@@ -311,7 +333,6 @@ def merge_markups(fns):
 
 
 def compile_tfmd_files(fns, outfldr, outspacing):
-
     excludes = ["lesions", "liver", "merged", "react"]
     for exclude in excludes:
         fns = [fn for fn in fns if exclude not in fn.name]
@@ -331,33 +352,37 @@ def compile_tfmd_files(fns, outfldr, outspacing):
     lms_nl = create_vector(lms_noliver)
     lms_ar = compound_to_np(lms_nl)
     lms_le_ar = np.sum(lms_ar, 0)
-
     lms_liver = [to_binary(lm) for lm in lms]
     lms_l = create_vector(lms_liver)
-
     lms_li_ar = compound_to_np(lms_l)
     lms_li_ar = np.mean(lms_li_ar, 0)
     lms_li_ar[lms_li_ar > 0.02] = 1
 
     lms_le = sitk.GetImageFromArray(lms_le_ar)
     lms_le.SetSpacing(outspacing)
-    sitk.WriteImage(lms_le, str(outfldr / "lesions.nii.gz"))
+    fn_lesions =str(outfldr / "lesions.nii.gz")
+    print("Writing: ", fn_lesions)
+    sitk.WriteImage(lms_le, fn_lesions)
 
     lms_li = sitk.GetImageFromArray(lms_li_ar)
     lms_li.SetSpacing(outspacing)
-    sitk.WriteImage(lms_li, str(outfldr / "liver.nii.gz"))
+    fn_liver =str(outfldr / "liver.nii.gz")
+    print("Writing: ", fn_liver)
+    sitk.WriteImage(lms_li, fn_liver)
 
     lms_merged_ar = lms_li_ar + lms_le_ar
     lms_merged = sitk.GetImageFromArray(lms_merged_ar)
     lms_merged.SetSpacing(outspacing)
-    print("Writing merged.nii.gz")
-    sitk.WriteImage(lms_merged, str(outfldr / "merged.nii.gz"))
+    fn_merged = str(outfldr / "merged.nii.gz")
+    print("Writing: ", fn_merged)
+    sitk.WriteImage(lms_merged, fn_merged)
 
 
 # %%
 if __name__ == "__main__":
-    # SECTION:-------------------- SETUP --------------------------------------------------------------------------------------
-    outspacing = [1, 1, 3]
+    # SECTION:-------------------- SETUP : Use the other file Onion which is more recent-------------------------------------------------------------------------------------
+
+    outspacing = [1,1,3]
     outshape = [288, 224, 64]
 
     parent = Path("/s/xnat_shadow/crc/registration_output/")
@@ -394,7 +419,6 @@ if __name__ == "__main__":
     dslc_lms_fldr = dslc_fldr / ("lms")
     maybe_makedirs([aslc_fldr, mslc_lms_fldr, dslc_fldr, dslc_lms_fldr])
 
-# %%
 # %%
     # NOTE: Missed lesions collate into: a.All sub-cm, b.missed subcm c.detected subcm
 
@@ -443,8 +467,8 @@ if __name__ == "__main__":
                 if len(missed) > 0:
                     missed_nbr = L.nbrhoods[L.nbrhoods["cent"].isin(cents_missed)]
                     missed_labs = missed_nbr["label_cc"].tolist()
-                    remapping_detected = {x: 0 for x in missed_labs}
 
+                    remapping_detected = {x: 0 for x in missed_labs}
                     detected_labs = L.nbrhoods[
                         ~L.nbrhoods["label_cc"].isin(missed_labs)
                     ]
@@ -732,7 +756,6 @@ if __name__ == "__main__":
 
     gt_fns = list(gt_fldr.glob("*"))
 
-
 # %%
     do_radiomics = False
 
@@ -765,7 +788,6 @@ if __name__ == "__main__":
     L = LabelMapGeometry(lm)
 
     sitk.WriteImage(L.lm_cc, "tmp.nii.gz")
-
 
     pred_fn = find_file(case_subid, preds_fldr)
 # %%
