@@ -1,26 +1,18 @@
 # %%
 from label_analysis.markups import MarkupFromLabelmap, MarkupMultipleFiles
-from label_analysis.merge import MergeLabelMaps
-from monai.transforms.utils import is_empty
 import ray
 import ast
-import shutil
-import time
 from pathlib import Path
 from label_analysis.geometry import LabelMapGeometry
 from label_analysis.helpers import crop_center, empty_img, get_lm_boundingbox, np_to_native, relabel, to_binary, to_cc, to_int
-from numpy import delete, nan_to_num
 from xnat.object_oriented import *
-from dicom_utils.capestart_related import collate_nii_foldertree
 
-from dicom_utils.helpers import dcm_segmentation
-from label_analysis.utils import align_sitk_imgs, fix_slicer_labelmap, get_metadata, is_sitk_file, thicken_nii
+from label_analysis.utils import align_sitk_imgs
 from xnat.object_oriented import *
 from fran.utils.fileio import maybe_makedirs, np_to_ni, save_json
 from fran.utils.helpers import chunks, find_matching_fn
 from fran.utils.string import find_file
-from registration.groupreg import apply_tfm_file, compound_to_np, create_vector
-from projects.aiscreening.main import add_liver, apply_tfm_folder, apply_tfms_all, compile_tfmd_files,  crop_center_resample, infer_slice_from_str, infer_str_from_slice
+from projects.aiscreening.main import add_liver,  apply_tfms_all, compile_tfmd_files,  crop_center_resample, infer_slice_from_str, infer_str_from_slice
 
 def make_mini_dfs(df):
     #list of dfs, one df per case_id
@@ -100,6 +92,7 @@ class Onions():
         self.create_erode_filter()
         self.lm_iso = self.res_iso.Execute(self.lm_bin)
         self.create_onions()
+        self.compute_volumes()
         self.mfil= sitk.MaskImageFilter()
         
     def create_onions(self):
@@ -108,6 +101,14 @@ class Onions():
         self.core = self.res_rev.Execute(self.core)
         self.shell = self.lm_bin- self.core
         self.core = self.res_rev.Execute(self.core)
+
+    def compute_volumes(self):
+        fil = sitk.LabelShapeStatisticsImageFilter()
+        fil.Execute(self.core)
+        self.vol_core = fil.GetPhysicalSize(1)*1e-3
+
+        fil.Execute(self.shell)
+        self.vol_shell = fil.GetPhysicalSize(1)*1e-3
 
     def create_erode_filter(self):
         self.eroder= sitk.BinaryErodeImageFilter()
@@ -214,12 +215,12 @@ class MiniDFProcessor():
         store_attr(but='lm_fldr')
 
     def process_minidf(self,mini ):
+        cents = mini.gt_cent
+        cid = mini.case_id.iloc[0]
+        if not isinstance(cid,str):
+            cid = cid.item()
+        lm_fn = find_file(cid,self.lm_fns)
         try:
-            cents = mini.gt_cent
-            cid = mini.case_id.iloc[0]
-            if not isinstance(cid,str):
-                cid = cid.item()
-            lm_fn = find_file(cid,self.lm_fns)
             lm =  sitk.ReadImage(str(lm_fn))
             R = Onions(lm,shell_dia=self.shell_dia)
             origin = R.origin
@@ -234,6 +235,7 @@ class MiniDFProcessor():
             locations =[]
             centres=[]
             for cent in cents:
+
                     if isinstance(cent,Union[float,int]):
                         location = None
                         vec_arr = None
@@ -243,6 +245,7 @@ class MiniDFProcessor():
                             vec = distance_vector(origin,cent)
                             vec_arr = [int(vec_*scal) for vec_,scal in zip(vec,scale)]
                             lm2.SetPixel(*vec_arr,1)
+                        
                             lm2_masked = R.mask_core(lm2)
                             lm2_masked_arr = sitk.GetArrayFromImage(lm2_masked)
                             if lm2_masked_arr.max()>0:
@@ -252,6 +255,8 @@ class MiniDFProcessor():
                     centres.append(vec_arr)
                     locations.append(location)
             mini = mini.assign(location=locations)
+            mini = mini.assign(vol_shell = R.vol_shell)
+            mini = mini.assign(vol_core= R.vol_core)
             return mini
         except:
             print("Error Processing ",lm_fn)
@@ -286,9 +291,7 @@ if __name__ == "__main__":
     fldr_core_liver = Path("/s/xnat_shadow/crc/registration_output/june/core_all_liver")
     fldr_core_crop = Path("/s/xnat_shadow/crc/registration_output/june/core_all_crop")
     fldr_shell_crop = Path("/s/xnat_shadow/crc/registration_output/june/shell_crop_all_crop")
-    fn_df = Path("/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh0mm_results.xlsx")
-    df =    pd.read_excel(fn_df)
-    cids =df.case_id.unique().tolist()
+    fn_df = Path("/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh1mm.xlsx")
     pred_fldr =Path("/s/fran_storage/predictions/litsmc/LITS-933")
     gt_fldr =Path("/s/xnat_shadow/crc/lms")
     gt_fns = list(gt_fldr.glob("*"))
@@ -301,6 +304,8 @@ if __name__ == "__main__":
 # %%
 #SECTION:-------------------- CREATING dataframe with locs--------------------------------------------------------------------------------------
 
+    df =    pd.read_excel(fn_df)
+    cids =df.case_id.dropna().unique().tolist()
     shell_dia =10
     dia_str  = str(shell_dia)
     mini_dfs = []
@@ -308,19 +313,21 @@ if __name__ == "__main__":
     mini_dfs =[]
     for cid in cids:
         mini = df.loc[df.case_id==cid]
+        if len(mini)==0:
+            tr()
         mini_dfs.append(mini)
     chunks_mini_dfs= list(chunks(mini_dfs,8))
 # %%
+
     actors = [ClusterDFProcessor.remote(chunk_mini_df, pred_fldr ,shell_dia) for chunk_mini_df in chunks_mini_dfs]
     results = ray.get([actor.process.remote() for actor in actors ])
-# %%
 # %%
     minis=[]
     for res in results:
         mini_df = pd.concat(res,axis=0)
         minis.append(mini_df)
     df_all = pd.concat(minis,axis=0)
-    df_all.to_excel(fn_df.str_replace("mm_results","mm_results{}".format(dia_str)),index=False)
+    df_all.to_excel(fn_df.str_replace("mm","mm_onions{}".format(dia_str)),index=False)
 # %%
 #SECTION:-------------------- DOTS ------------------------------------
 

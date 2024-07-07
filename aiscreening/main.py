@@ -43,7 +43,6 @@ from label_analysis.merge import MergeLabelMaps
 
 from label_analysis.overlap import BatchScorer, ScorerAdvanced, ScorerFiles
 from label_analysis.remap import RemapFromMarkup
-from label_analysis.utils import is_sitk_file
 
 
 sys.path += ["/home/ub/code"]
