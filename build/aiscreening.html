@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>aiscreening package &#8212; Projects 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=c058f7c8" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="aiscreening-package">
+<h1>aiscreening package<a class="headerlink" href="#aiscreening-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-aiscreening.main">
+<span id="aiscreening-main-module"></span><h2>aiscreening.main module<a class="headerlink" href="#module-aiscreening.main" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="aiscreening.main.Markups">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">Markups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markup_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>it loads a cups nifti with a  core (label 2) and shell (label 3). It uses the cups to mask lm and estimate what is in shell and what is core</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.create_json_fn">
+<span class="sig-name descname"><span class="pre">create_json_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.create_json_fn" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.create_markups">
+<span class="sig-name descname"><span class="pre">create_markups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fn_suffix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.create_markups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.get_core_shell_counts">
+<span class="sig-name descname"><span class="pre">get_core_shell_counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm_core</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lm_shell</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.get_core_shell_counts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm_all_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lm_det_fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.process" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.process_lm">
+<span class="sig-name descname"><span class="pre">process_lm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.process_lm" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.remove_liver">
+<span class="sig-name descname"><span class="pre">remove_liver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.remove_liver" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.main.Markups.split_lm">
+<span class="sig-name descname"><span class="pre">split_lm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.Markups.split_lm" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.add_liver">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">add_liver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lesions_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">liver_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.add_liver" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.apply_tfm_folder">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">apply_tfm_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tfm_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.apply_tfm_folder" title="Link to this definition">¶</a></dt>
+<dd><p>input_fldr: untransformed files are here
+output_flder: store transformed files here</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.apply_tfms_all">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">apply_tfms_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">untfmd_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.apply_tfms_all" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.collate_files_common_prefix">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">collate_files_common_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.collate_files_common_prefix" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.compile_tfmd_files">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">compile_tfmd_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outspacing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.compile_tfmd_files" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.crop_center_resample">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">crop_center_resample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outspacing</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outshape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'nearest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.crop_center_resample" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.folder_names_common_prefix">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">folder_names_common_prefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_prefix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.folder_names_common_prefix" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.infer_slice_from_str">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">infer_slice_from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.infer_slice_from_str" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.infer_str_from_slice">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">infer_str_from_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.infer_str_from_slice" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.main.merge_markups">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.main.</span></span><span class="sig-name descname"><span class="pre">merge_markups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.main.merge_markups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-aiscreening.onions">
+<span id="aiscreening-onions-module"></span><h2>aiscreening.onions module<a class="headerlink" href="#module-aiscreening.onions" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">DotImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">centres</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dot_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'large'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.DotImage" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent and manipulate an image with dots.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage.centres">
+<span class="sig-name descname"><span class="pre">centres</span></span><a class="headerlink" href="#aiscreening.onions.DotImage.centres" title="Link to this definition">¶</a></dt>
+<dd><p>The list of dot centers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage.lm">
+<span class="sig-name descname"><span class="pre">lm</span></span><a class="headerlink" href="#aiscreening.onions.DotImage.lm" title="Link to this definition">¶</a></dt>
+<dd><p>The label map image where dots will be placed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SimpleITK.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage.dot_value">
+<span class="sig-name descname"><span class="pre">dot_value</span></span><a class="headerlink" href="#aiscreening.onions.DotImage.dot_value" title="Link to this definition">¶</a></dt>
+<dd><p>The value to be set for each dot in the label map image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage.size">
+<span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#aiscreening.onions.DotImage.size" title="Link to this definition">¶</a></dt>
+<dd><p>The size of the dots (either ‘small’ or ‘large’).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">put_dots():</span></span></dt>
+<dd><p>Places dots on the label map image according to the given centers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">contiguous(vec_arr):</span></span></dt>
+<dd><p>Generates positions for an 8-pixel cube around a given vector.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage.contiguous">
+<span class="sig-name descname"><span class="pre">contiguous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec_arr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.DotImage.contiguous" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.DotImage.put_dots">
+<span class="sig-name descname"><span class="pre">put_dots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.DotImage.put_dots" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="aiscreening.onions.MiniDFProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">MiniDFProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_dia</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.MiniDFProcessor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to process mini dataframes with association to their label maps. Each minidf is a case_id filtered extract of a main df. The ‘main df’ is the output of BatchScorer algorithm from my label_analysis lib.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.MiniDFProcessor.lm_fns">
+<span class="sig-name descname"><span class="pre">lm_fns</span></span><a class="headerlink" href="#aiscreening.onions.MiniDFProcessor.lm_fns" title="Link to this definition">¶</a></dt>
+<dd><p>List of file names holding label maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.MiniDFProcessor.shell_dia">
+<span class="sig-name descname"><span class="pre">shell_dia</span></span><a class="headerlink" href="#aiscreening.onions.MiniDFProcessor.shell_dia" title="Link to this definition">¶</a></dt>
+<dd><p>The diameter of the processing shell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">process_minidf(mini):</span></span></dt>
+<dd><p>Processes a mini dataframe to extract relevant information and associations with its label map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.MiniDFProcessor.process_minidf">
+<span class="sig-name descname"><span class="pre">process_minidf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mini</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_ray_trace_ctx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.MiniDFProcessor.process_minidf" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">Onions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_dia</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the segmented regions (onions) within a label map.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.lm">
+<span class="sig-name descname"><span class="pre">lm</span></span><a class="headerlink" href="#aiscreening.onions.Onions.lm" title="Link to this definition">¶</a></dt>
+<dd><p>The input label map image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SimpleITK.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.shell_dia">
+<span class="sig-name descname"><span class="pre">shell_dia</span></span><a class="headerlink" href="#aiscreening.onions.Onions.shell_dia" title="Link to this definition">¶</a></dt>
+<dd><p>Diameter of the shell in millimeters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.lm_bin">
+<span class="sig-name descname"><span class="pre">lm_bin</span></span><a class="headerlink" href="#aiscreening.onions.Onions.lm_bin" title="Link to this definition">¶</a></dt>
+<dd><p>The binary version of the label map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SimpleITK.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.out_spacing">
+<span class="sig-name descname"><span class="pre">out_spacing</span></span><a class="headerlink" href="#aiscreening.onions.Onions.out_spacing" title="Link to this definition">¶</a></dt>
+<dd><p>The desired output spacing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.core">
+<span class="sig-name descname"><span class="pre">core</span></span><a class="headerlink" href="#aiscreening.onions.Onions.core" title="Link to this definition">¶</a></dt>
+<dd><p>The core region after erosion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SimpleITK.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.shell">
+<span class="sig-name descname"><span class="pre">shell</span></span><a class="headerlink" href="#aiscreening.onions.Onions.shell" title="Link to this definition">¶</a></dt>
+<dd><p>The shell region after core subtraction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SimpleITK.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.vol_core">
+<span class="sig-name descname"><span class="pre">vol_core</span></span><a class="headerlink" href="#aiscreening.onions.Onions.vol_core" title="Link to this definition">¶</a></dt>
+<dd><p>Volume of the core in cubic millimeters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.vol_shell">
+<span class="sig-name descname"><span class="pre">vol_shell</span></span><a class="headerlink" href="#aiscreening.onions.Onions.vol_shell" title="Link to this definition">¶</a></dt>
+<dd><p>Volume of the shell in cubic millimeters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.mfil">
+<span class="sig-name descname"><span class="pre">mfil</span></span><a class="headerlink" href="#aiscreening.onions.Onions.mfil" title="Link to this definition">¶</a></dt>
+<dd><p>A filter used for masking operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>SimpleITK.MaskImageFilter</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">create_onions():</span></span></dt>
+<dd><p>Creates the core and shell regions of the label map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">compute_volumes():</span></span></dt>
+<dd><p>Computes the volumes of core and shell regions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">create_erode_filter():</span></span></dt>
+<dd><p>Creates the erosion filter for core extraction.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">mask_core(lm):</span></span></dt>
+<dd><p>Masks the input image with the core region.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">mask_shell(lm):</span></span></dt>
+<dd><p>Masks the input image with the shell region.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">create_resamplers():</span></span></dt>
+<dd><p>Creates resamplers for isotropic and reverting processes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">metadata(lm):</span></span></dt>
+<dd><p>Extracts metadata from the label map.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">resampler_isotropic():</span></span></dt>
+<dd><p>Creates a resampler for generating an isotropic image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">resampler_revert():</span></span></dt>
+<dd><p>Creates a resampler for reverting isotropic transformation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.compute_volumes">
+<span class="sig-name descname"><span class="pre">compute_volumes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.compute_volumes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.create_erode_filter">
+<span class="sig-name descname"><span class="pre">create_erode_filter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.create_erode_filter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.create_onions">
+<span class="sig-name descname"><span class="pre">create_onions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.create_onions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.create_resamplers">
+<span class="sig-name descname"><span class="pre">create_resamplers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.create_resamplers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.mask_core">
+<span class="sig-name descname"><span class="pre">mask_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.mask_core" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.mask_shell">
+<span class="sig-name descname"><span class="pre">mask_shell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.mask_shell" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.metadata">
+<span class="sig-name descname"><span class="pre">metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.metadata" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.resampler_isotropic">
+<span class="sig-name descname"><span class="pre">resampler_isotropic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.resampler_isotropic" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiscreening.onions.Onions.resampler_revert">
+<span class="sig-name descname"><span class="pre">resampler_revert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.Onions.resampler_revert" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.onions.distance_vector">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">distance_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.distance_vector" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.onions.make_mini_dfs">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">make_mini_dfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.make_mini_dfs" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.onions.mini_dfs_to_dots">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">mini_dfs_to_dots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gt_fldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfldr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dot_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.mini_dfs_to_dots" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aiscreening.onions.phy_to_arr_coords">
+<span class="sig-prename descclassname"><span class="pre">aiscreening.onions.</span></span><span class="sig-name descname"><span class="pre">phy_to_arr_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aiscreening.onions.phy_to_arr_coords" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-aiscreening">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aiscreening" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Projects</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Usman Bashir.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.0.2</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/aiscreening.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

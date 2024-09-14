@@ -1,4 +1,4 @@
-im %%
+from typing import Any, Dict, List, Optional, Tuple
 from label_analysis.helpers import crop_center, get_labels
 import ipdb
 from label_analysis.markups import MarkupFromLabelmap
@@ -82,10 +82,28 @@ slcs = [
 ]
 
 
-def apply_tfm_folder(tfm_fn, input_fldr, output_fldr, slc, is_label=True):
+def apply_tfm_folder(
+    tfm_fn: Union[str, Path],
+    input_fldr: Union[str, Path],
+    output_fldr: Union[str, Path],
+    slc: slice,
+    is_label: bool = True,
+) -> None:
     """
-    input_fldr: untransformed files are here
-    output_flder: store transformed files here
+    Applies transformations to a folder of images using a specified transform file.
+
+    Parameters:
+    -----------
+    tfm_fn : Union[str, Path]
+        File path to the transformation parameters.
+    input_fldr : Union[str, Path]
+        Directory of untransformed files.
+    output_fldr : Union[str, Path]
+        Directory to store transformed files.
+    slc : slice
+        Slice object to select specific files.
+    is_label : bool
+        Flag to indicate if the data is label data. Default is True.
     """
     maybe_makedirs(output_fldr)
     tfm_fn = str(tfm_fn)
@@ -99,13 +117,9 @@ def apply_tfm_folder(tfm_fn, input_fldr, output_fldr, slc, is_label=True):
     fn_all = []
     for fn in fn_lms2:
         fn_missed_ = find_matching_fn(fn, fns, use_cid=True)
-        # if not fn_missed_:
-            # fn_missed_ = (
-            #     fn  # there are some extra files in the cropped resampled folder.
-            # )
         fn_all.append(fn_missed_)
 
-    lms= []
+    lms = []
     for fn in fn_all:
         if fn is None:
             lm = empty_img(tmplt_lm)
@@ -116,8 +130,20 @@ def apply_tfm_folder(tfm_fn, input_fldr, output_fldr, slc, is_label=True):
     store_compound_img(im_lesions, out_fldr=output_fldr, fnames=fn_all)
 
 
-def folder_names_common_prefix(folder_prefix):
-    # folder prefix without trailing underscore e.g., "/s/xnat_shadow/crc/registration_output/lms_all"
+def folder_names_common_prefix(folder_prefix: str) -> List[Path]:
+    """
+    Generates a list of folder paths with a common prefix.
+
+    Parameters:
+    -----------
+    folder_prefix : str
+        Folder prefix without trailing underscore (e.g., "/s/xnat_shadow/crc/registration_output/lms_all").
+
+    Returns:
+    --------
+    List[Path]
+        List of generated folder paths.
+    """
     folders = []
     parent_folder = Path("/s/xnat_shadow/crc/registration_output/")
     folder_prefix = folder_prefix + "_"
@@ -129,8 +155,20 @@ def folder_names_common_prefix(folder_prefix):
     return folders
 
 
-def collate_files_common_prefix(prefix):
+def collate_files_common_prefix(prefix: str) -> List[Path]:
+    """
+    Collates files from folders with a common prefix.
 
+    Parameters:
+    -----------
+    prefix : str
+        Common prefix for folder names.
+
+    Returns:
+    --------
+    List[Path]
+        List of file paths collated from folders with the common prefix.
+    """
     fldrs_all = folder_names_common_prefix(prefix)
     fls_all = []
     for fldr in fldrs_all:
@@ -140,57 +178,92 @@ def collate_files_common_prefix(prefix):
     return fls_all
 
 
-def infer_slice_from_str(string):
-    start, end = string.split("_")
-    start, end = int(start), int(end)
-    slc = slice(start, end)
-    return slc
+def infer_slice_from_str(string: str) -> slice:
+    """
+    Infers a slice object from a string.
 
-def infer_str_from_slice(slc):
-    start =str(slc.start)
-    stop = str(slc.stop)
-    return "_".join([start,stop])
+    Parameters:
+    -----------
+    string : str
+        String representation of the slice (e.g., "10_20").
+
+    Returns:
+    --------
+    slice
+        Slice object inferred from the string.
+    """
+    start, end = map(int, string.split("_"))
+    return slice(start, end)
 
 
-def apply_tfms_all(untfmd_fldr, output_folder):
-    # folders = folder_names_common_prefix(output_folder_prefix)
-    # pat = r"\d+_\d+"
+def infer_str_from_slice(slc: slice) -> str:
+    """
+    Infers a string representation from a slice object.
+
+    Parameters:
+    -----------
+    slc : slice
+        Slice object.
+
+    Returns:
+    --------
+    str
+        String representation of the slice (e.g., "10_20").
+    """
+    return f"{slc.start}_{slc.stop}"
+
+
+def apply_tfms_all(
+    untfmd_fldr: Union[str, Path], output_folder: Union[str, Path]
+) -> None:
+    """
+    Applies transformations to all specified slices in a folder.
+
+    Parameters:
+    -----------
+    untfmd_fldr : Union[str, Path]
+        Folder containing untransformed files.
+    output_folder : Union[str, Path]
+        Folder where the transformed files will be stored.
+    """
     for slc in slcs:
-            tfm_suffix = infer_str_from_slice(slc)
+        tfm_suffix = infer_str_from_slice(slc)
 
-            tfm_fn = Path(
-                "/s/xnat_shadow/crc/registration_output/TransformParameters.{0}.txt".format(
-                    tfm_suffix
-                )
-            )
-            assert tfm_fn.exists(), "File not found".format(tfm_fn)
-            apply_tfm_folder(
-                tfm_fn=tfm_fn, input_fldr=untfmd_fldr, output_fldr=output_folder, slc=slc
-            )
-    #
-    # for fldr in folders:
-    #     tfm_suffix = re.search(pat, fldr.name)[0]
-    #     slc = infer_slice_from_str(tfm_suffix)
-    #     tfm_fn = Path(
-    #         "/s/xnat_shadow/crc/registration_output/TransformParameters.{0}.txt".format(
-    #             tfm_suffix
-    #         )
-    #     )
-    #     assert tfm_fn.exists(), "File not found".format(tfm_fn)
-    #     apply_tfm_folder(
-    #         tfm_fn=tfm_fn, input_fldr=untfmd_fldr, output_fldr=fldr, slc=slc
-    #     )
+        tfm_fn = Path(
+            f"/s/xnat_shadow/crc/registration_output/TransformParameters.{tfm_suffix}.txt"
+        )
+        assert tfm_fn.exists(), f"File not found: {tfm_fn}"
+        apply_tfm_folder(
+            tfm_fn=tfm_fn, input_fldr=untfmd_fldr, output_fldr=output_folder, slc=slc
+        )
 
 
-def add_liver(lesions_fldr, liver_fldr, output_fldr, overwrite=False):
-    ms_fns = lesions_fldr.glob("*")
-    ms_fns = [fn for fn in ms_fns if is_sitk_file(fn)]
-    liver_fns = list(liver_fldr.glob("*"))
-    liver_fns = [fn for fn in liver_fns if is_sitk_file(fn)]
+def add_liver(
+    lesions_fldr: Union[str, Path],
+    liver_fldr: Union[str, Path],
+    output_fldr: Union[str, Path],
+    overwrite: bool = False,
+) -> None:
+    """
+    Adds liver segmentation to lesion segmentations and stores the results.
+
+    Parameters:
+    -----------
+    lesions_fldr : Union[str, Path]
+        Folder containing lesion segmentations.
+    liver_fldr : Union[str, Path]
+        Folder containing liver segmentations.
+    output_fldr : Union[str, Path]
+        Folder where the output will be stored.
+    overwrite : bool
+        Flag to overwrite existing files. Default is False.
+    """
+    ms_fns = [fn for fn in lesions_fldr.glob("*") if is_sitk_file(fn)]
+    liver_fns = [fn for fn in liver_fldr.glob("*") if is_sitk_file(fn)]
     for ms_fn in pbar(ms_fns):
         liver_fn = find_matching_fn(ms_fn, liver_fns, use_cid=True)
-        output_fname = output_fldr / (ms_fn.name)
-        if overwrite == True or not output_fname.exists():
+        output_fname = output_fldr / ms_fn.name
+        if overwrite or not output_fname.exists():
             MergeLiver = MergeLabelMaps(
                 liver_fn,
                 ms_fn,
@@ -202,18 +275,31 @@ def add_liver(lesions_fldr, liver_fldr, output_fldr, overwrite=False):
             MergeLiver.write_output()
 
 
-def crop_center_resample(in_fldr, out_fldr, outspacing, outshape,mode="nearest"):
-    # outspacing = [1,1,3]
-    # outshape = [288,224,64]
-    # out_fldr = Path("/s/xnat_shadow/crc/cropped_resampled_missed_subcm")
-    # out_lms_fldr = out_fldr / ("lms")
-    # maybe_makedirs(out_lms_fldr)
+def crop_center_resample(
+    in_fldr: Union[str, Path],
+    out_fldr: Union[str, Path],
+    outspacing: List[float],
+    outshape: List[int],
+    mode: str = "nearest",
+) -> None:
+    """
+    Crops, centers, and resamples images in a folder.
+
+    Parameters:
+    -----------
+    in_fldr : Union[str, Path]
+        Input folder containing the images.
+    out_fldr : Union[str, Path]
+        Output folder where the processed images will be saved.
+    outspacing : List[float]
+        Desired output spacing.
+    outshape : List[int]
+        Desired output shape.
+    mode : str
+        Interpolation mode ('nearest', 'linear', etc.). Default is 'nearest'.
+    """
     fn_lms = list(in_fldr.glob("*.*"))
-    pairs = []
-    for lm_fn in fn_lms:
-        # lm_fn = find_matching_fn(img_fn, fn_lms)
-        dici = {"label": str(lm_fn)}
-        pairs.append(dici)
+    pairs = [{"label": str(lm_fn)} for lm_fn in fn_lms]
     keys = ["label"]
     L = LoadSITKd(keys=keys)
     E = EnsureChannelFirstd(keys=keys, channel_dim="no_channel")
@@ -232,17 +318,59 @@ def crop_center_resample(in_fldr, out_fldr, outspacing, outshape,mode="nearest")
         fn = Path(fn)
         print("Processing", fn)
         fn_lm_out = out_fldr / fn.name
-        # sitk.WriteImage(i,str(fn_img_out))
         sitk.WriteImage(l, str(fn_lm_out))
 
 
 class Markups:
     """
-    it loads a cups nifti with a  core (label 2) and shell (label 3). It uses the cups to mask lm and estimate what is in shell and what is core
+    This class loads a NIfTI image with core (label 2) and shell (label 3) regions, uses these regions to mask input labels, and processes them
+    to separate core and shell parts. It also creates visual markup representations for these segments.
 
+    Attributes:
+    -----------
+    shell : SimpleITK.Image
+        Remapped image where only the shell region is retained.
+    core : SimpleITK.Image
+        Remapped image where only the core region is retained.
+    outfldr : Path
+        Directory where output files will be stored.
+    markup_shape : Optional[str]
+        Shape of the markup glyphs.
+
+    Methods:
+    --------
+    remove_liver(lm)
+        Removes the liver region from the label image.
+    process(lm_all_fn, lm_det_fn)
+        Processes two label images to extract core and shell regions, and creates markup representations.
+    create_json_fn(lm_fn, suffix)
+        Creates a JSON filename based on input filename and suffix.
+    process_lm(lm)
+        Processes a label image to remove liver and split into core and shell segments.
+    split_lm(lm)
+        Splits the label image into core and shell parts.
+    get_core_shell_counts(lm_core, lm_shell)
+        Gets the count of core and shell regions.
+    create_markups(lm, color, fn_suffix)
+        Creates markup representations for a label region and saves it to a JSON file.
+
+    Examples:
+    ---------
+    >>> markups = Markups(outfldr='/output/folder')
+    >>> markups.process('/path/to/lm_all.nii', '/path/to/lm_det.nii')
     """
 
-    def __init__(self, outfldr, markup_shape=None):
+    def __init__(self, outfldr: Union[str, Path], markup_shape: Optional[str] = None):
+        """
+        Initializes the Markups class with the given output folder and optional markup shape.
+
+        Parameters:
+        -----------
+        outfldr : Union[str, Path]
+            The directory where output files will be saved.
+        markup_shape : Optional[str]
+            Shape of the markup glyphs. Default is None.
+        """
         cups = sitk.ReadImage(
             "/s/xnat_shadow/crc/registration_output/lms_missed_50_100/merged_3cups.nrrd"
         )
@@ -251,13 +379,35 @@ class Markups:
         self.outfldr = Path(outfldr)
         self.markup_shape = markup_shape
 
-    def remove_liver(self, lm):
+    def remove_liver(self, lm: sitk.Image) -> sitk.Image:
+        """
+        Removes the liver region (label 1) from the label image.
+
+        Parameters:
+        -----------
+        lm : sitk.Image
+            The input label image.
+
+        Returns:
+        --------
+        sitk.Image
+            Binary image with liver region removed.
+        """
         lm = relabel(lm, {1: 0})
         lm = to_binary(lm)
         return lm
 
-    def process(self, lm_all_fn, lm_det_fn):
+    def process(self, lm_all_fn: Union[str, Path], lm_det_fn: Union[str, Path]) -> None:
+        """
+        Processes two label images to extract core and shell regions, and creates markup representations.
 
+        Parameters:
+        -----------
+        lm_all_fn : Union[str, Path]
+            File path to the 'all' label image.
+        lm_det_fn : Union[str, Path]
+            File path to the 'detected' label image.
+        """
         self.case_filename = lm_all_fn
         lm_all = sitk.ReadImage(str(lm_all_fn))
         lm_det = sitk.ReadImage(str(lm_det_fn))
@@ -278,25 +428,91 @@ class Markups:
         self.markups_det_core = self.create_markups(lm_det_core, "blue", "det_core")
         self.markups_det_shell = self.create_markups(lm_det_shell, "green", "det_shell")
 
-    def create_json_fn(self, lm_fn, suffix):
+    def create_json_fn(self, lm_fn: Union[str, Path], suffix: str) -> Path:
+        """
+        Creates a JSON filename based on the input filename and suffix.
+
+        Parameters:
+        -----------
+        lm_fn : Union[str, Path]
+            The input filename.
+        suffix : str
+            The suffix to add to the filename.
+
+        Returns:
+        --------
+        Path
+            Full path to the output JSON file.
+        """
         lm_fn_name = strip_extension(lm_fn.name)
         lm_fn_name = "_".join([lm_fn_name, suffix])
         lm_fn_name = lm_fn_name + ".json"
         fn_out = self.outfldr / lm_fn_name
         return fn_out
 
-    def process_lm(self, lm):
+    def process_lm(
+        self, lm: sitk.Image
+    ) -> Tuple[sitk.Image, sitk.Image, Tuple[int, int]]:
+        """
+        Processes a label image to remove liver and split into core and shell segments.
+
+        Parameters:
+        -----------
+        lm : sitk.Image
+            The input label image.
+
+        Returns:
+        --------
+        lm_core : sitk.Image
+            Core region image.
+        lm_shell : sitk.Image
+            Shell region image.
+        counts : tuple
+            A tuple containing counts of core and shell regions.
+        """
         lm = self.remove_liver(lm)
         lm_core, lm_shell = self.split_lm(lm)
         counts = self.get_core_shell_counts(lm_core, lm_shell)
         return lm_core, lm_shell, counts
 
-    def split_lm(self, lm):
+    def split_lm(self, lm: sitk.Image) -> Tuple[sitk.Image, sitk.Image]:
+        """
+        Splits the label image into core and shell parts.
+
+        Parameters:
+        -----------
+        lm : sitk.Image
+            The input label image.
+
+        Returns:
+        --------
+        lm_core : sitk.Image
+            Core region image.
+        lm_shell : sitk.Image
+            Shell region image.
+        """
         lm_core = sitk.Mask(lm, self.shell, outsideValue=0, maskingValue=3)
         lm_shell = sitk.Mask(lm, self.core, outsideValue=0, maskingValue=2)
         return lm_core, lm_shell
 
-    def get_core_shell_counts(self, lm_core, lm_shell):
+    def get_core_shell_counts(
+        self, lm_core: sitk.Image, lm_shell: sitk.Image
+    ) -> Tuple[int, int]:
+        """
+        Gets the count of core and shell regions.
+
+        Parameters:
+        -----------
+        lm_core : sitk.Image
+            Core region image.
+        lm_shell : sitk.Image
+            Shell region image.
+
+        Returns:
+        --------
+        tuple
+            A tuple containing counts of core and shell regions.
+        """
         LC = LabelMapGeometry(lm_core)
         count_core = len(LC)
 
@@ -304,7 +520,26 @@ class Markups:
         count_shell = len(LS)
         return count_core, count_shell
 
-    def create_markups(self, lm, color, fn_suffix):
+    def create_markups(
+        self, lm: sitk.Image, color: str, fn_suffix: str
+    ) -> Dict[str, Any]:
+        """
+        Creates markup representations for a label region and saves it to a JSON file.
+
+        Parameters:
+        -----------
+        lm : sitk.Image
+            The input label image.
+        color : str
+            Color of the markup glyphs.
+        fn_suffix : str
+            Suffix to add to the JSON filename.
+
+        Returns:
+        --------
+        dict
+            A dictionary containing markup data.
+        """
         M = MarkupFromLabelmap([], 0, "auto", color)
         a = M.process(lm)
         if self.markup_shape is not None:
@@ -314,9 +549,21 @@ class Markups:
         return a
 
 
-def merge_markups(fns):
+def merge_markups(fns: List[Union[str, Path]]) -> Dict[str, Any]:
+    """
+    Merges multiple markup JSON files into a single dictionary representation.
 
-    mups_full = load_json(fn)
+    Parameters:
+    -----------
+    fns : list of Union[str, Path]
+        List of file paths to the JSON markup files.
+
+    Returns:
+    --------
+    dict
+        A dictionary containing merged markup data.
+    """
+    mups_full = load_json(fns[0])
     header = mups_full["@schema"]
     mups_base = mups_full["markups"]
     mups_base[0]["display"]["glyphSize"] = 5.0
@@ -331,10 +578,25 @@ def merge_markups(fns):
     return dici
 
 
-def compile_tfmd_files(fns, outfldr, outspacing):
+def compile_tfmd_files(
+    fns: List[Union[str, Path]],
+    outfldr: Union[str, Path],
+    outspacing: Tuple[float, float, float],
+) -> None:
+    """
+    Compiles and processes transformation files, excluding specific categories, and writes the resulting images into the output folder.
+
+    Parameters:
+    -----------
+    fns : list of Union[str, Path]
+        List of file paths to the transformation files.
+    outfldr : Union[str, Path]
+        Output directory where the processed files will be saved.
+    outspacing : tuple
+        Desired spacing for the output images.
+    """
     excludes = ["lesions", "liver", "merged", "react"]
-    for exclude in excludes:
-        fns = [fn for fn in fns if exclude not in fn.name]
+    fns = [fn for fn in fns if all(exclude not in fn.name for exclude in excludes)]
     reference_fldr = Path("/s/xnat_shadow/crc/cropped_resampled_missed_subcm/lms/")
     ref_files = list(reference_fldr.glob("*"))
     fns_final = []
@@ -359,13 +621,13 @@ def compile_tfmd_files(fns, outfldr, outspacing):
 
     lms_le = sitk.GetImageFromArray(lms_le_ar)
     lms_le.SetSpacing(outspacing)
-    fn_lesions =str(outfldr / "lesions.nii.gz")
+    fn_lesions = str(outfldr / "lesions.nii.gz")
     print("Writing: ", fn_lesions)
     sitk.WriteImage(lms_le, fn_lesions)
 
     lms_li = sitk.GetImageFromArray(lms_li_ar)
     lms_li.SetSpacing(outspacing)
-    fn_liver =str(outfldr / "liver.nii.gz")
+    fn_liver = str(outfldr / "liver.nii.gz")
     print("Writing: ", fn_liver)
     sitk.WriteImage(lms_li, fn_liver)
 
@@ -379,9 +641,9 @@ def compile_tfmd_files(fns, outfldr, outspacing):
 
 # %%
 if __name__ == "__main__":
-    # SECTION:-------------------- SETUP : Use the other file Onion which is more recent-------------------------------------------------------------------------------------
+# SECTION:-------------------- SETUP : Use the other file Onion which is more recent------------------------------------------------------------------------------------- <CR> <CR> <CR>
 
-    outspacing = [1,1,3]
+    outspacing = [1, 1, 3]
     outshape = [288, 224, 64]
 
     parent = Path("/s/xnat_shadow/crc/registration_output/")
@@ -492,21 +754,21 @@ if __name__ == "__main__":
                     sitk.WriteImage(L.lm_cc, str(ms_fldr / fn_ms.name))
                     # else:
                 #     tr()
-    # SECTION:-------------------- Add liver  --------------------------------------------------------------------------------------
+# SECTION:-------------------- Add liver  -------------------------------------------------------------------------------------- <CR> <CR> <CR>
 
     add_liver(ms_fldr, preds_fldr, msl_fldr)
     add_liver(as_fldr, preds_fldr, asl_fldr, True)
     add_liver(ds_fldr, preds_fldr, dsl_fldr, True)
 
 # %%
-    # SECTION:-------------------- CROP CENTER AND RESAMPLE- ---------------------
+# SECTION:-------------------- CROP CENTER AND RESAMPLE- --------------------- <CR> <CR> <CR>
 
     crop_center_resample(asl_fldr, aslc_fldr, outspacing, outshape)
     crop_center_resample(dsl_fldr, dslc_fldr, outspacing, outshape)
     crop_center_resample(msl_fldr, mslc_fldr, outspacing, outshape)
 
 # %%
-    # SECTION:-------------------- Apply tfms iteratively (5 tfms)--------------------------------------------------------------------------------------'
+# SECTION:-------------------- Apply tfms iteratively (5 tfms)--------------------------------------------------------------------------------------' <CR> <CR> <CR>
 
     apply_tfms_all(aslc_fldr, output_folder_prefix="lms_all")
     apply_tfms_all(dslc_fldr, output_folder_prefix="lms_ds")
@@ -516,7 +778,7 @@ if __name__ == "__main__":
     # compile_tfmd_files(out_f_ms)
 # %%
 # %%
-    # SECTION:--------------------Super merge ALL merged files (1 merged file per tfm) --------------------------
+# SECTION:--------------------Super merge ALL merged files (1 merged file per tfm) -------------------------- <CR> <CR> <CR>
 
     outfldr_missed = Path("/s/xnat_shadow/crc/registration_output/lms_ms_allfiles")
     outfldr_all = Path("/s/xnat_shadow/crc/registration_output/lms_all_allfiles")
@@ -534,7 +796,7 @@ if __name__ == "__main__":
 
     compile_tfmd_files(fls_det, outfldr_detected, outspacing)
 # %%
-    # SECTION:--------------------CREATE CORE VERSUS SHELL MARKUPS -----------------------------------------
+# SECTION:--------------------CREATE CORE VERSUS SHELL MARKUPS ----------------------------------------- <CR> <CR> <CR>
 
 # %%
 
@@ -586,7 +848,7 @@ if __name__ == "__main__":
 # %%
 
 # %%
-    # SECTION:-------------------- Batch scoring dsc--------------------------------------------------------------------------------------
+# SECTION:-------------------- Batch scoring dsc-------------------------------------------------------------------------------------- <CR> <CR> <CR>
     lesion_masks_folder = Path("/s/xnat_shadow/crc/wxh/masks_manual_todo")
     lm_final_fldr = Path("/s/xnat_shadow/crc/wxh/masks_manual_final/")
     lesion_masks_folder2 = Path("/s/xnat_shadow/crc/srn/cases_with_findings/masks")
