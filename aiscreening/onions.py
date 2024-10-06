@@ -344,7 +344,7 @@ class Onions:
 
 class DotImage:
     """
-    A class used to represent and manipulate an image with dots.
+    A class which takes a labelmap, and replaces lesions by dots at centroids. Aimed for visuals with low clutter
 
     Attributes
     ----------
@@ -596,7 +596,7 @@ if __name__ == "__main__":
         "/s/xnat_shadow/crc/registration_output/june/shell_crop_all_crop"
     )
     fn_df = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh0mm.xlsx"
+        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh1mm.xlsx"
     )
     pred_fldr = Path("/s/fran_storage/predictions/litsmc/LITS-933")
     gt_fldr = Path("/s/xnat_shadow/crc/lms")
