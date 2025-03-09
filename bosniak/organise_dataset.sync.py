@@ -2,8 +2,8 @@
 # %%
 import pandas as pd
 import collections
-from fran.utils.helpers import *
-from fran.utils.fileio import *
+from utilz.helpers import *
+from utilz.fileio import *
 
 
 main_folder = Path('/home/ub/bosniak2')
@@ -83,7 +83,7 @@ if __name__ == "__main__":
         else: print("exists")
 
     
-    from fran.utils.helpers import multiprocess_multiarg
+    from utilz.helpers import multiprocess_multiarg
     args = [[f] for f in files]
     out =    multiprocess_multiarg(tmp,args,debug=False)
 

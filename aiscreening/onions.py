@@ -19,10 +19,10 @@ from label_analysis.helpers import (
     to_int,
 )
 from xnat.object_oriented import *  # Assumes the necessary imports from the module
-from fran.utils.fileio import maybe_makedirs, np_to_ni, save_json
-from fran.utils.helpers import chunks, find_matching_fn, ray
+from utilz.fileio import maybe_makedirs, np_to_ni, save_json
+from utilz.helpers import chunks, find_matching_fn, ray
 import logging
-from fran.utils.string import find_file
+from utilz.string import find_file
 from .main import (
     add_liver,
     apply_tfms_all,
