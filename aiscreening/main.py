@@ -1,49 +1,42 @@
 from typing import Any, Dict, List, Optional, Tuple
-from label_analysis.helpers import crop_center, get_labels
+
 import ipdb
+from registration.groupreg import (apply_tfm_file, compound_to_np,
+                                   create_vector, store_compound_img)
+
+from label_analysis.helpers import crop_center, get_labels
 from label_analysis.markups import MarkupFromLabelmap
-from registration.groupreg import (
-    apply_tfm_file,
-    compound_to_np,
-    create_vector,
-    store_compound_img,
-)
 
 tr = ipdb.set_trace
 
-import pandas as pd
 import ast
+import shutil
+import sys
+from functools import reduce
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import SimpleITK as sitk
+from fran.transforms.imageio import LoadSITKd
 from monai.data.dataset import Dataset
-from utilz.helpers import pbar
 from monai.transforms.compose import Compose
-from monai.transforms.croppad.dictionary import CropForegroundd, ResizeWithPadOrCropd
+from monai.transforms.croppad.dictionary import (CropForegroundd,
+                                                 ResizeWithPadOrCropd)
 from monai.transforms.intensity.dictionary import MaskIntensityd
 from monai.transforms.io.dictionary import SaveImaged
 from monai.transforms.spatial.dictionary import Spacingd
-from monai.transforms.utility.dictionary import (
-    EnsureChannelFirstd,
-    SqueezeDimd,
-    Transposed,
-)
-import numpy as np
-from pathlib import Path
-import SimpleITK as sitk
+from monai.transforms.utility.dictionary import (EnsureChannelFirstd,
+                                                 SqueezeDimd, Transposed)
 from torch.utils.data import DataLoader
-
-from fran.transforms.imageio import LoadSITKd
 from utilz.fileio import load_json, maybe_makedirs, save_json
-from utilz.helpers import find_matching_fn
-from utilz.imageviewers import view_sitk, ImageMaskViewer
-import ast
-from functools import reduce
-import sys
-import shutil
+from utilz.helpers import find_matching_fn, pbar
+from utilz.imageviewers import ImageMaskViewer, view_sitk
+
 from label_analysis.geometry import LabelMapGeometry
 from label_analysis.merge import MergeLabelMaps
-
 from label_analysis.overlap import BatchScorer, ScorerAdvanced, ScorerFiles
 from label_analysis.remap import RemapFromMarkup
-
 
 sys.path += ["/home/ub/code"]
 import itertools as il
@@ -53,20 +46,15 @@ import numpy as np
 import pandas as pd
 import SimpleITK as sitk
 import six
-from label_analysis.helpers import *
-
 from fran.transforms.totensor import ToTensorT
 from utilz.fileio import maybe_makedirs
 from utilz.helpers import *
 from utilz.imageviewers import *
-from utilz.string import (
-    find_file,
-    info_from_filename,
-    match_filenames,
-    replace_extension,
-    strip_extension,
-    strip_slicer_strings,
-)
+from utilz.string import (find_file, info_from_filename, match_filenames,
+                          replace_extension, strip_extension,
+                          strip_slicer_strings)
+
+from label_analysis.helpers import *
 
 np.set_printoptions(linewidth=250)
 np.set_printoptions(formatter={"float": lambda x: "{0:0.2f}".format(x)})
@@ -641,7 +629,7 @@ def compile_tfmd_files(
 
 # %%
 if __name__ == "__main__":
-# SECTION:-------------------- SETUP : Use the other file Onion which is more recent------------------------------------------------------------------------------------- <CR> <CR> <CR>
+# SECTION:-------------------- SETUP : Use the other file Onion which is more recent------------------------------------------------------------------------------------- <CR> <CR> <CR> <CR>
 
     outspacing = [1, 1, 3]
     outshape = [288, 224, 64]
@@ -754,21 +742,21 @@ if __name__ == "__main__":
                     sitk.WriteImage(L.lm_cc, str(ms_fldr / fn_ms.name))
                     # else:
                 #     tr()
-# SECTION:-------------------- Add liver  -------------------------------------------------------------------------------------- <CR> <CR> <CR>
+# SECTION:-------------------- Add liver  -------------------------------------------------------------------------------------- <CR> <CR> <CR> <CR>
 
     add_liver(ms_fldr, preds_fldr, msl_fldr)
     add_liver(as_fldr, preds_fldr, asl_fldr, True)
     add_liver(ds_fldr, preds_fldr, dsl_fldr, True)
 
 # %%
-# SECTION:-------------------- CROP CENTER AND RESAMPLE- --------------------- <CR> <CR> <CR>
+# SECTION:-------------------- CROP CENTER AND RESAMPLE- --------------------- <CR> <CR> <CR> <CR>
 
     crop_center_resample(asl_fldr, aslc_fldr, outspacing, outshape)
     crop_center_resample(dsl_fldr, dslc_fldr, outspacing, outshape)
     crop_center_resample(msl_fldr, mslc_fldr, outspacing, outshape)
 
 # %%
-# SECTION:-------------------- Apply tfms iteratively (5 tfms)--------------------------------------------------------------------------------------' <CR> <CR> <CR>
+# SECTION:-------------------- Apply tfms iteratively (5 tfms)--------------------------------------------------------------------------------------' <CR> <CR> <CR> <CR>
 
     apply_tfms_all(aslc_fldr, output_folder_prefix="lms_all")
     apply_tfms_all(dslc_fldr, output_folder_prefix="lms_ds")
@@ -778,7 +766,7 @@ if __name__ == "__main__":
     # compile_tfmd_files(out_f_ms)
 # %%
 # %%
-# SECTION:--------------------Super merge ALL merged files (1 merged file per tfm) -------------------------- <CR> <CR> <CR>
+# SECTION:--------------------Super merge ALL merged files (1 merged file per tfm) -------------------------- <CR> <CR> <CR> <CR>
 
     outfldr_missed = Path("/s/xnat_shadow/crc/registration_output/lms_ms_allfiles")
     outfldr_all = Path("/s/xnat_shadow/crc/registration_output/lms_all_allfiles")
@@ -796,7 +784,7 @@ if __name__ == "__main__":
 
     compile_tfmd_files(fls_det, outfldr_detected, outspacing)
 # %%
-# SECTION:--------------------CREATE CORE VERSUS SHELL MARKUPS ----------------------------------------- <CR> <CR> <CR>
+# SECTION:--------------------CREATE CORE VERSUS SHELL MARKUPS ----------------------------------------- <CR> <CR> <CR> <CR>
 
 # %%
 
@@ -848,7 +836,7 @@ if __name__ == "__main__":
 # %%
 
 # %%
-# SECTION:-------------------- Batch scoring dsc-------------------------------------------------------------------------------------- <CR> <CR> <CR>
+# SECTION:-------------------- Batch scoring dsc-------------------------------------------------------------------------------------- <CR> <CR> <CR> <CR>
     lesion_masks_folder = Path("/s/xnat_shadow/crc/wxh/masks_manual_todo")
     lm_final_fldr = Path("/s/xnat_shadow/crc/wxh/masks_manual_final/")
     lesion_masks_folder2 = Path("/s/xnat_shadow/crc/srn/cases_with_findings/masks")
