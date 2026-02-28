@@ -1,0 +1,16 @@
+pyproject.toml
+aiscreening/__init__.py
+aiscreening/main.py
+aiscreening/onions.py
+aiscreening/rough.py
+bosniak/__init__.py
+bosniak/nnunet_study.py
+bosniak/organise_dataset.sync.py
+bosniak/trials.sync.py
+bosniak/utils.py
+projects.egg-info/PKG-INFO
+projects.egg-info/SOURCES.txt
+projects.egg-info/dependency_links.txt
+projects.egg-info/top_level.txt
+react/__init__.py
+react/main.py

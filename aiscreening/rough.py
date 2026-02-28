@@ -9,7 +9,7 @@ from registration.groupreg import (
     store_compound_img,
 )
 
-from utilz.string import info_from_filename
+from utilz.stringz import info_from_filename
 
 tr = ipdb.set_trace
 

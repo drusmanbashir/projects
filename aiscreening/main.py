@@ -50,7 +50,7 @@ from fran.transforms.totensor import ToTensorT
 from utilz.fileio import maybe_makedirs
 from utilz.helpers import *
 from utilz.imageviewers import *
-from utilz.string import (find_file, info_from_filename, match_filenames,
+from utilz.stringz import (find_file, info_from_filename, match_filenames,
                           replace_extension, strip_extension,
                           strip_slicer_strings)
 

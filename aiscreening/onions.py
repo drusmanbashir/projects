@@ -22,7 +22,7 @@ from xnat.object_oriented import *  # Assumes the necessary imports from the mod
 from utilz.fileio import maybe_makedirs, np_to_ni, save_json
 from utilz.helpers import chunks, find_matching_fn, ray
 import logging
-from utilz.string import find_file
+from utilz.stringz import find_file
 from .main import (
     add_liver,
     apply_tfms_all,
