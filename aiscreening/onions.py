@@ -462,7 +462,7 @@ class MiniDFProcessor:
             Diameter of the processing shell. Default is 10.
         """
         self.lm_fns = list(Path(lm_fldr).glob("*"))
-        store_attr(but="lm_fldr")
+        self.shell_dia = shell_dia
 
     def process_minidf(self, mini: pd.DataFrame) -> Optional[pd.DataFrame]:
         """
