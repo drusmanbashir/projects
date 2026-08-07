@@ -4,7 +4,7 @@ import ipdb
 from registration.groupreg import (apply_tfm_file, compound_to_np,
                                    create_vector, store_compound_img)
 
-from label_analysis.helpers import crop_center, get_labels
+from label_analysis.utils.utils.helpers import crop_center, get_labels
 from label_analysis.markups import MarkupFromLabelmap
 
 tr = ipdb.set_trace
@@ -19,14 +19,14 @@ import numpy as np
 import pandas as pd
 import SimpleITK as sitk
 from fran.transforms.imageio import LoadSITKd
-from monai.data.dataset import Dataset
-from monai.transforms.compose import Compose
-from monai.transforms.croppad.dictionary import (CropForegroundd,
+from det3d.monai.data.dataset import Dataset
+from det3d.det3d.monai.transforms.compose import Compose
+from det3d.det3d.monai.transforms.croppad.dictionary import (CropForegroundd,
                                                  ResizeWithPadOrCropd)
-from monai.transforms.intensity.dictionary import MaskIntensityd
-from monai.transforms.io.dictionary import SaveImaged
-from monai.transforms.spatial.dictionary import Spacingd
-from monai.transforms.utility.dictionary import (EnsureChannelFirstd,
+from det3d.monai.transforms.intensity.dictionary import MaskIntensityd
+from det3d.det3d.monai.transforms.io.dictionary import SaveImaged
+from det3d.det3d.monai.transforms.spatial.dictionary import Spacingd
+from det3d.det3d.monai.transforms.utility.dictionary import (EnsureChannelFirstd,
                                                  SqueezeDimd, Transposed)
 from torch.utils.data import DataLoader
 from utilz.fileio import load_json, maybe_makedirs, save_json
@@ -35,7 +35,7 @@ from utilz.imageviewers import ImageMaskViewer, view_sitk
 
 from label_analysis.geometry import LabelMapGeometry
 from label_analysis.merge import MergeLabelMaps
-from label_analysis.overlap import BatchScorer, ScorerAdvanced, ScorerFiles
+from label_analysis.overlap_old import BatchScorer, ScorerAdvanced, ScorerFiles
 from label_analysis.remap import RemapFromMarkup
 
 sys.path += ["/home/ub/code"]
@@ -54,7 +54,7 @@ from utilz.stringz import (find_file, info_from_filename, match_filenames,
                           replace_extension, strip_extension,
                           strip_slicer_strings)
 
-from label_analysis.helpers import *
+from label_analysis.utils.utils.helpers import *
 
 np.set_printoptions(linewidth=250)
 np.set_printoptions(formatter={"float": lambda x: "{0:0.2f}".format(x)})
@@ -638,26 +638,26 @@ if __name__ == "__main__":
 
     mup_fldr = parent / ("markups")
     msb_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/missed_subcm_binary/"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/missed_subcm_binary/"
     )
     dsb_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/detected_subcm_binary/"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/detected_subcm_binary/"
     )
     ds_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/detected_subcm/"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/detected_subcm/"
     )
-    as_fldr = Path("/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/all_subcm/")
-    ms_fldr = Path("/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/missed_subcm")
+    as_fldr = Path("/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/all_subcm/")
+    ms_fldr = Path("/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/missed_subcm")
     maybe_makedirs([ms_fldr, msb_fldr, dsb_fldr, ds_fldr, as_fldr])
-    preds_fldr = Path("/s/fran_storage/predictions/litsmc/LITS-933")
+    preds_fldr = Path("/t/fran_storage/predictions/litsmc/LITS-933")
     msl_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/missed_subcm_with_liver"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/missed_subcm_with_liver"
     )
     asl_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/all_subcm_with_liver"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/all_subcm_with_liver"
     )
     dsl_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/detected_subcm_with_liver"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/detected_subcm_with_liver"
     )
     maybe_makedirs([msl_fldr, asl_fldr, dsl_fldr])
     mslc_fldr = Path("/s/xnat_shadow/crc/cropped_resampled_missed_subcm")
@@ -678,7 +678,7 @@ if __name__ == "__main__":
     imgs_fldr = Path("/s/xnat_shadow/crc/completed/images")
 
     results_df = pd.read_excel(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh0mm.xlsx"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh0mm.xlsx"
     )
 
 # %%
@@ -989,7 +989,7 @@ if __name__ == "__main__":
 # %%
     exc_pat = "_\d\.nii"
     preds_fldr = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-787_LITS-810_LITS-811_fixed_mc/"
+        "/t/fran_storage/predictions/litsmc/LITS-787_LITS-810_LITS-811_fixed_mc/"
     )
     for fn in preds_fldr.glob("*"):
         # fn = find_file("CRC018",preds_fldr)
@@ -1015,7 +1015,7 @@ if __name__ == "__main__":
         preds_fldr=preds_fldr,
         debug=False,
         do_radiomics=False,
-    )  # ,output_fldr=Path("/s/fran_storage/predictions/litsmc/LITS-787_mod/results"))
+    )  # ,output_fldr=Path("/t/fran_storage/predictions/litsmc/LITS-787_mod/results"))
     B.process()
 # %%
     df = pd.read_csv(B.output_fn)

@@ -3,12 +3,12 @@ import ast
 import shutil
 import time
 from pathlib import Path
-from label_analysis.helpers import to_binary
+from label_analysis.utils.utils.helpers import to_binary
 from xnat.object_oriented import *
 from dicom_utils.capestart_related import collate_nii_foldertree
 
 from dicom_utils.helpers import dcm_segmentation
-from label_analysis.utils import fix_slicer_labelmap, get_metadata, thicken_nii
+from label_analysis.utils.utils import fix_slicer_labelmap, get_metadata, thicken_nii
 from xnat.object_oriented import *
 from utilz.fileio import maybe_makedirs
 from utilz.helpers import find_matching_fn

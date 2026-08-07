@@ -8,7 +8,7 @@ from typing import List, Union, Optional, Any
 
 from label_analysis.markups import MarkupFromLabelmap, MarkupMultipleFiles
 from label_analysis.geometry import LabelMapGeometry
-from label_analysis.helpers import (
+from label_analysis.utils.utils.helpers import (
     crop_center,
     empty_img,
     get_lm_boundingbox,
@@ -584,7 +584,7 @@ if __name__ == "__main__":
     outshape = [288, 224, 64]
     outspacing = [1, 1, 3]
     fldr_main = Path("/s/xnat_shadow/crc/registration_output/june")
-    preds_fldr = Path("/s/fran_storage/predictions/litsmc/LITS-933")
+    preds_fldr = Path("/t/fran_storage/predictions/litsmc/LITS-933")
     fldr_core = Path("/s/xnat_shadow/crc/registration_output/june/core_all")
     fldr_shell = Path("/s/xnat_shadow/crc/registration_output/june/shell_all")
     fldr_shell_liver = Path(
@@ -596,9 +596,9 @@ if __name__ == "__main__":
         "/s/xnat_shadow/crc/registration_output/june/shell_crop_all_crop"
     )
     fn_df = Path(
-        "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh1mm.xlsx"
+        "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh1mm.xlsx"
     )
-    pred_fldr = Path("/s/fran_storage/predictions/litsmc/LITS-933")
+    pred_fldr = Path("/t/fran_storage/predictions/litsmc/LITS-933")
     gt_fldr = Path("/s/xnat_shadow/crc/lms")
     gt_fns = list(gt_fldr.glob("*"))
     fldr_core_tfmd = Path("/s/xnat_shadow/crc/registration_output/june/tfmd_core/")
@@ -633,7 +633,7 @@ if __name__ == "__main__":
         if len(mini) == 0:
             tr()
         mini_dfs.append(mini)
-    chunks_mini_dfs = list(chunks(mini_dfs, 8))
+    chunks_mini_dfs = chunks(mini_dfs, n_chunks=8)
 # %%
 
     os.makedirs("logs")
@@ -656,7 +656,7 @@ if __name__ == "__main__":
 # %%
 # SECTION:-------------------- DOTS ------------------------------------ <CR>
 
-    df_fn = "/s/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh0mm_results10.xlsx"
+    df_fn = "/t/fran_storage/predictions/litsmc/LITS-933_fixed_mc/results/results_thresh0mm_results10.xlsx"
     df = pd.read_excel(df_fn)
     df_core = df.loc[df.location == "core"]
     df_shell = df.loc[df.location == "shell"]
@@ -787,7 +787,7 @@ if __name__ == "__main__":
 
     fldr_gt = Path("/s/xnat_shadow/crc/lms")
     lm_fn = (
-        "/s/fran_storage/predictions/litsmc/LITS-933/crc_CRC125_20170708_ABDOMEN.nii.gz"
+        "/t/fran_storage/predictions/litsmc/LITS-933/crc_CRC125_20170708_ABDOMEN.nii.gz"
     )
 
 # %%
@@ -891,7 +891,7 @@ if __name__ == "__main__":
     for fn_c in fns_c:
         fn_out = fldr_shell / fn_c.name
         fn_liver = find_matching_fn(
-            fn_c, Path("/s/fran_storage/predictions/litsmc/LITS-935"), True
+            fn_c, Path("/t/fran_storage/predictions/litsmc/LITS-935"), True
         )
         fn_gt_cr = find_matching_fn(fn_c, fldr_crop, True)
         fn_cropped = find_matching_fn(fn_c, fldr_crop, True)

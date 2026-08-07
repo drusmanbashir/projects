@@ -1,5 +1,5 @@
 # %%
-from label_analysis.helpers import crop_center, get_labels
+from label_analysis.utils.utils.helpers import crop_center, get_labels
 import ipdb
 from label_analysis.markups import MarkupFromLabelmap
 from registration.groupreg import (
@@ -15,14 +15,14 @@ tr = ipdb.set_trace
 
 import pandas as pd
 import ast
-from monai.data.dataset import Dataset
+from det3d.monai.data.dataset import Dataset
 from utilz.helpers import pbar
-from monai.transforms.compose import Compose
-from monai.transforms.croppad.dictionary import CropForegroundd, ResizeWithPadOrCropd
-from monai.transforms.intensity.dictionary import MaskIntensityd
-from monai.transforms.io.dictionary import SaveImaged
-from monai.transforms.spatial.dictionary import Spacingd
-from monai.transforms.utility.dictionary import (
+from det3d.monai.transforms.compose import Compose
+from det3d.det3d.monai.transforms.croppad.dictionary import CropForegroundd, ResizeWithPadOrCropd
+from det3d.det3d.monai.transforms.intensity.dictionary import MaskIntensityd
+from det3d.det3d.monai.transforms.io.dictionary import SaveImaged
+from det3d.det3d.monai.transforms.spatial.dictionary import Spacingd
+from det3d.det3d.monai.transforms.utility.dictionary import (
     EnsureChannelFirstd,
     SqueezeDimd,
     Transposed,
@@ -43,7 +43,7 @@ import shutil
 from label_analysis.geometry import LabelMapGeometry
 from label_analysis.merge import MergeLabelMaps
 
-from label_analysis.overlap import BatchScorer, ScorerAdvanced, ScorerFiles
+from label_analysis.overlap_old import BatchScorer, ScorerAdvanced, ScorerFiles
 from label_analysis.remap import RemapFromMarkup
 
 

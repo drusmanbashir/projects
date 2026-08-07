@@ -1,2 +1,12 @@
 # macOS Finder
 .DS_Store
+
+# Generated local artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+case_recorder_wide.csv
