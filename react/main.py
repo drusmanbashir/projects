@@ -3,7 +3,7 @@ import ast
 import shutil
 import time
 from pathlib import Path
-from label_analysis.utils.utils.helpers import to_binary
+from label_analysis.utils.helpers import to_binary
 from xnat.object_oriented import *
 from dicom_utils.capestart_related import collate_nii_foldertree
 

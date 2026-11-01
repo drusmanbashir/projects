@@ -8,7 +8,7 @@ from typing import List, Union, Optional, Any
 
 from label_analysis.markups import MarkupFromLabelmap, MarkupMultipleFiles
 from label_analysis.geometry import LabelMapGeometry
-from label_analysis.utils.utils.helpers import (
+from label_analysis.utils.helpers import (
     crop_center,
     empty_img,
     get_lm_boundingbox,

@@ -1,5 +1,5 @@
 # %%
-from label_analysis.utils.utils.helpers import crop_center, get_labels
+from label_analysis.utils.helpers import crop_center, get_labels
 import ipdb
 from label_analysis.markups import MarkupFromLabelmap
 from registration.groupreg import (
@@ -15,14 +15,14 @@ tr = ipdb.set_trace
 
 import pandas as pd
 import ast
-from det3d.monai.data.dataset import Dataset
+from monai.data.dataset import Dataset
 from utilz.helpers import pbar
-from det3d.monai.transforms.compose import Compose
+from monai.transforms.compose import Compose
 from det3d.det3d.monai.transforms.croppad.dictionary import CropForegroundd, ResizeWithPadOrCropd
-from det3d.det3d.monai.transforms.intensity.dictionary import MaskIntensityd
-from det3d.det3d.monai.transforms.io.dictionary import SaveImaged
-from det3d.det3d.monai.transforms.spatial.dictionary import Spacingd
-from det3d.det3d.monai.transforms.utility.dictionary import (
+from monai.transforms.intensity.dictionary import MaskIntensityd
+from monai.transforms.io.dictionary import SaveImaged
+from monai.transforms.spatial.dictionary import Spacingd
+from monai.transforms.utility.dictionary import (
     EnsureChannelFirstd,
     SqueezeDimd,
     Transposed,

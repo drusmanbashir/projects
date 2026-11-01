@@ -4,7 +4,7 @@ import ipdb
 from registration.groupreg import (apply_tfm_file, compound_to_np,
                                    create_vector, store_compound_img)
 
-from label_analysis.utils.utils.helpers import crop_center, get_labels
+from label_analysis.utils.helpers import crop_center, get_labels
 from label_analysis.markups import MarkupFromLabelmap
 
 tr = ipdb.set_trace
@@ -19,14 +19,14 @@ import numpy as np
 import pandas as pd
 import SimpleITK as sitk
 from fran.transforms.imageio import LoadSITKd
-from det3d.monai.data.dataset import Dataset
-from det3d.det3d.monai.transforms.compose import Compose
-from det3d.det3d.monai.transforms.croppad.dictionary import (CropForegroundd,
+from monai.data.dataset import Dataset
+from monai.transforms.compose import Compose
+from monai.transforms.croppad.dictionary import (CropForegroundd,
                                                  ResizeWithPadOrCropd)
-from det3d.monai.transforms.intensity.dictionary import MaskIntensityd
-from det3d.det3d.monai.transforms.io.dictionary import SaveImaged
-from det3d.det3d.monai.transforms.spatial.dictionary import Spacingd
-from det3d.det3d.monai.transforms.utility.dictionary import (EnsureChannelFirstd,
+from monai.transforms.intensity.dictionary import MaskIntensityd
+from monai.transforms.io.dictionary import SaveImaged
+from monai.transforms.spatial.dictionary import Spacingd
+from monai.transforms.utility.dictionary import (EnsureChannelFirstd,
                                                  SqueezeDimd, Transposed)
 from torch.utils.data import DataLoader
 from utilz.fileio import load_json, maybe_makedirs, save_json
@@ -54,7 +54,7 @@ from utilz.stringz import (find_file, info_from_filename, match_filenames,
                           replace_extension, strip_extension,
                           strip_slicer_strings)
 
-from label_analysis.utils.utils.helpers import *
+from label_analysis.utils.helpers import *
 
 np.set_printoptions(linewidth=250)
 np.set_printoptions(formatter={"float": lambda x: "{0:0.2f}".format(x)})
