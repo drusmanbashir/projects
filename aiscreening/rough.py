@@ -18,7 +18,7 @@ import ast
 from monai.data.dataset import Dataset
 from utilz.helpers import pbar
 from monai.transforms.compose import Compose
-from det3d.det3d.monai.transforms.croppad.dictionary import CropForegroundd, ResizeWithPadOrCropd
+from monai.transforms.croppad.dictionary import CropForegroundd, ResizeWithPadOrCropd
 from monai.transforms.intensity.dictionary import MaskIntensityd
 from monai.transforms.io.dictionary import SaveImaged
 from monai.transforms.spatial.dictionary import Spacingd
